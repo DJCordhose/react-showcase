@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Creation
+- https://github.com/reduxjs/cra-template-redux-typescript
+  - yarn create react-app my-app --template redux-typescript
+- yarn upgrade typescript --latest
+
 ## Available Scripts
 
 In the project directory, you can run:
