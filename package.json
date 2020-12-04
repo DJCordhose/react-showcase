@@ -22,7 +22,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build",
+    "testcafe": "testcafe chrome testcafe/",
+    "testcafe:watch": "testcafe chrome testcafe/ -L",
+    "testcafe:debug": "testcafe chrome testcafe/ --debug-on-fail"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "serve": "^11.3.2",
+    "testcafe": "^1.9.4"
   }
 }
