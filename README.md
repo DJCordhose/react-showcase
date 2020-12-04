@@ -5,6 +5,56 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - yarn create react-app my-app --template redux-typescript
 - yarn upgrade typescript --latest
 
+## Architecture / Tech
+
+https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-online3.pdf
+
+### Framework
+- https://2019.stateofjs.com/front-end-frameworks/
+- https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
+- https://reactjs.org/
+
+
+### State Management
+- https://2019.stateofjs.com/data-layer/
+- https://djcordhose.github.io/spa-workshop/2020_arch.html#/innere-struktur
+- https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-state
+- Redux
+  - https://redux.js.org/
+  - https://redux-toolkit.js.org/
+- MobX
+  - https://mobx.js.org/react-integration.html
+  - https://michel.codes/blogs/mobx6
+
+
+### Typing
+- https://2019.stateofjs.com/javascript-flavors/
+- https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
+- https://www.typescriptlang.org/
+
+### Testing
+- https://2019.stateofjs.com/testing/
+- `yarn test`
+- runner for node based unit tests: https://jestjs.io/
+  - uses 
+    - https://github.com/jsdom/jsdom
+    - https://github.com/testing-library/react-testing-library
+  - Types of testing using Jest
+    - smoke: does the component render at all (without throwing)?
+    - shallow: render into abstract format and check that
+      - snapshot (https://jestjs.io/docs/en/snapshot-testing): check against golden master
+    - full: render to HTML and check lifecycle methods
+- end2end tests: https://devexpress.github.io/testcafe/
+- https://nilshartmann.github.io/react-training/2020_1211_react.html#/118
+
+### i18n, l10n
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
+- https://github.com/i18next/react-i18next
+  - https://www.robinwieruch.de/react-internationalization
+### Build / Deployment
+- `yarn build`
+- https://create-react-app.dev/docs/deployment/ 
+
 ## Available Scripts
 
 In the project directory, you can run:
