@@ -49,9 +49,10 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
   - https://testing-library.com/docs/testcafe-testing-library/intro
 
 ### i18n, l10n
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
-- https://github.com/i18next/react-i18next
+- https://react.i18next.com/
+  - https://github.com/i18next/react-i18next
   - https://www.robinwieruch.de/react-internationalization
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
 - https://momentjs.com/
 
 ### Build / Deployment

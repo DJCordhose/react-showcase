@@ -9,11 +9,14 @@ import {
 } from './counterSlice';
 import styles from './Counter.module.css';
 
+import { useTranslation } from 'react-i18next';
+
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
-
+  const { t } = useTranslation();
+  
   return (
     <div>
       <div className={styles.row}>
@@ -52,13 +55,13 @@ export function Counter() {
             dispatch(incrementByAmount(Number(incrementAmount) || 0))
           }
         >
-          Add Amount
+          {t('add')}
         </button>
         <button
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
         >
-          Add Async
+          {t('add')} (async)
         </button>
       </div>
     </div>
