@@ -1,3 +1,7 @@
+# Showcase: React for business applications
+
+__Given the typical technical and structural requirements of a business application what are the recommended technology choices and architectural nuggets?__
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Creation
@@ -54,15 +58,19 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
 ### i18n, l10n
 - https://react.i18next.com/
   - https://www.i18next.com/translation-function/interpolation
-  - https://www.robinwieruch.de/react-internationalization
   - https://github.com/i18next/react-i18next
   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
+- Deprecated
   - https://momentjs.com/
   - http://numeraljs.com/
 
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
+
+### Component Frameworks
+- https://material-ui.com/
+- https://github.com/microsoft/fluentui
 
 ## Available Scripts
 
