@@ -21,6 +21,11 @@ function App() {
             <button onClick={() => i18n.changeLanguage("en")}>{t("en")}</button>
           )}
         </p>
+        <p>{t("users", {
+          date: new Date(),
+          count: 1_000_000,
+          revenue: 1_000_000_000.95
+        })}</p>
       </header>
     </div>
   );

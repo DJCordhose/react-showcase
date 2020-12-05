@@ -53,10 +53,12 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
 
 ### i18n, l10n
 - https://react.i18next.com/
-  - https://github.com/i18next/react-i18next
+  - https://www.i18next.com/translation-function/interpolation
   - https://www.robinwieruch.de/react-internationalization
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
-- https://momentjs.com/
+  - https://github.com/i18next/react-i18next
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
+  - https://momentjs.com/
+  - http://numeraljs.com/
 
 ### Build / Deployment
 - `yarn build`

@@ -1,5 +1,6 @@
 {
-    "add": "Wert hinzufügen",
+    "add": "Wert hinzufügen ({{mode}})",
+    "users": "Heute, {{date, date}}, haben wir {{count, number}} Benutzer, das bringt {{revenue, euro}} Umsatz",
     "de": "Deutsch",
     "en": "Englisch"
 }
