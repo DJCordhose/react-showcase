@@ -26,35 +26,34 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
 
-
 ### Typing
 - https://2019.stateofjs.com/javascript-flavors/
 - https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
 - https://www.typescriptlang.org/
 
 ### Testing
-- https://2019.stateofjs.com/testing/
 - `yarn test`
+- https://2019.stateofjs.com/testing/
+- https://nilshartmann.github.io/react-training/2020_1211_react.html#/118
 - https://reactjs.org/docs/testing.html
 - runner for node based unit tests: https://jestjs.io/
-  - uses 
-    - https://github.com/jsdom/jsdom
-    - https://github.com/testing-library/react-testing-library
-      - https://testing-library.com/docs/guide-which-query
-  - Types of testing using Jest
-    - smoke: does the component render at all (without throwing)?
-    - shallow: render into abstract format and check that
-      - snapshot (https://jestjs.io/docs/en/snapshot-testing): check against golden master
-    - full: render to HTML and check lifecycle methods
+  - smoke: does the component render at all (without throwing)?
+  - snapshot (https://jestjs.io/docs/en/snapshot-testing): only advisable to use as golden master when checking against external (REST) API  
+  - full: render to HTML and check lifecycle methods
+  - logic: pure unit test for reducers
+- https://github.com/testing-library/react-testing-library
+  - Advocates role based selectors, but largely impractical when using i18n
+  - testid is robust and well proven approach instead
+  - https://testing-library.com/docs/guide-which-query
 - end2end tests: https://devexpress.github.io/testcafe/
   - https://testing-library.com/docs/testcafe-testing-library/intro
-- https://nilshartmann.github.io/react-training/2020_1211_react.html#/118
 
 ### i18n, l10n
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
 - https://github.com/i18next/react-i18next
   - https://www.robinwieruch.de/react-internationalization
 - https://momentjs.com/
+
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 

@@ -3,9 +3,15 @@ import { Selector } from 'testcafe';
 fixture `App Browser Test`
     .page `http://localhost:3000`;
 
-const valueEl = Selector("[aria-label='Value']");
-const incrementBtn = Selector("[aria-label='Increment value']");
-const decrementBtn = Selector("[aria-label='Decrement value']");
+// const valueEl = Selector("[aria-label='Value']");
+// const incrementBtn = Selector("[aria-label='Increment value']");
+// const decrementBtn = Selector("[aria-label='Decrement value']");
+
+// version using testid
+const valueEl = Selector("[data-testid='count:value']");
+const incrementBtn = Selector("[data-testid='count:increment']");
+const decrementBtn = Selector("[data-testid='count:decrement']");
+
 
 test('increase', async t => {
 
@@ -23,3 +29,4 @@ test('decrease', async t => {
     await t.expect(newValue).eql(initialValue - 1);
 
 });
+
