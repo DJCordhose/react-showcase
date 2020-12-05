@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import LoadingIndicator from "./LoadingIndicator";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
@@ -11,7 +12,7 @@ import "./i18n";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Suspense fallback={null}>
+      <Suspense fallback={<LoadingIndicator title='Loading translations' />}>
         <App />
       </Suspense>
     </Provider>

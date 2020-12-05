@@ -30,6 +30,9 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
 - https://2019.stateofjs.com/javascript-flavors/
 - https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
 - https://www.typescriptlang.org/
+- https://www.typescriptlang.org/docs/handbook/react.html
+- https://react-typescript-cheatsheet.netlify.app/
+- https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
 
 ### Testing
 - `yarn test`
