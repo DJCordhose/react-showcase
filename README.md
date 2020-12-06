@@ -1,5 +1,7 @@
 # Showcase: React for business applications
 
+[![Build Status](https://travis-ci.org/djcordhose/react-showcase.svg?branch=main)](https://travis-ci.org/djcordhose/react-showcase)
+
 __Given the typical technical and structural requirements of a business application what are the recommended technology choices and architectural nuggets?__
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
