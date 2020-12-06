@@ -27,9 +27,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "testcafe": "testcafe chrome testcafe/",
-    "testcafe:watch": "testcafe chrome testcafe/ -L",
-    "testcafe:debug": "testcafe chrome testcafe/ --debug-on-fail"
+    "e2e": "testcafe chrome testcafe/",
+    "e2e:watch": "testcafe chrome testcafe/ -L",
+    "e2e:debug": "testcafe chrome testcafe/ --debug-on-fail"
   },
   "eslintConfig": {
     "extends": "react-app"
