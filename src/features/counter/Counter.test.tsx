@@ -37,6 +37,9 @@ test("handles click correctly", () => {
     </Provider>
   );
 
+  expect(screen.getByRole("presentation")).toHaveTextContent("0");
+
   userEvent.click(screen.getByText("+"));
-  expect(screen.getByRole("presentation")).toHaveValue("1");
+  
+  expect(screen.getByRole("presentation")).toHaveTextContent("1");
 });
