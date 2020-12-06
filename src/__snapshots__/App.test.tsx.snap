@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot: renders correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <div>
+      <div
+        className="row"
+      >
+        <button
+          aria-label="Increment value"
+          className="button"
+          data-testid="count:increment"
+          onClick={[Function]}
+        >
+          +
+        </button>
+        <span
+          aria-label="Value"
+          className="value"
+          data-testid="count:value"
+        >
+          0
+        </span>
+        <button
+          aria-label="Decrement value"
+          className="button"
+          data-testid="count:decrement"
+          onClick={[Function]}
+        >
+          -
+        </button>
+      </div>
+      <div
+        className="row"
+      >
+        <input
+          aria-label="Set increment amount"
+          className="textbox"
+          onChange={[Function]}
+          type="number"
+          value={2}
+        />
+        <button
+          className="button"
+          onClick={[Function]}
+        >
+          add
+        </button>
+        <button
+          className="asyncButton"
+          onClick={[Function]}
+        >
+          add
+        </button>
+      </div>
+    </div>
+    <p>
+      <button
+        onClick={[Function]}
+      >
+        de
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        en
+      </button>
+    </p>
+    <p>
+      users
+    </p>
+  </header>
+</div>
+`;

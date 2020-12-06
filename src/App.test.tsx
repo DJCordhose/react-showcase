@@ -1,11 +1,12 @@
 import React, { Suspense } from "react";
 import { render } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./App";
 
 // https://react.i18next.com/misc/testing
-jest.mock('react-i18next', () => ({
+jest.mock("react-i18next", () => ({
   // this mock makes sure any components using the translate hook can use it without a warning being shown
   useTranslation: () => {
     return {
@@ -25,4 +26,17 @@ test("smoke: renders something", () => {
   );
 
   expect(getByText(/users/i)).toBeInTheDocument();
+});
+
+// https://jestjs.io/docs/en/snapshot-testing
+test("snapshot: renders correctly", () => {
+  const tree = renderer
+    .create(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+    .toJSON();
+    
+  expect(tree).toMatchSnapshot();
 });
