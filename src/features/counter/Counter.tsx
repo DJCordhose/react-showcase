@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState<number>(2);
   const { t } = useTranslation();
   
   return (
@@ -46,20 +46,21 @@ export function Counter() {
         <input
           className={styles.textbox}
           aria-label="Set increment amount"
+          type="number"
           value={incrementAmount}
-          onChange={e => setIncrementAmount(e.target.value)}
+          onChange={e => setIncrementAmount(Number.parseInt(e.target.value))}
         />
         <button
           className={styles.button}
           onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
+            dispatch(incrementByAmount(incrementAmount ?? 0))
           }
         >
           {t('add', { mode: 'sync'})}
         </button>
         <button
           className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
+          onClick={() => dispatch(incrementAsync(incrementAmount ?? 0))}
         >
           {t('add', { mode: 'async'})}
         </button>
