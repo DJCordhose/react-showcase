@@ -60,6 +60,7 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
   - logic: pure unit test for reducers
 - https://testing-library.com/docs/react-testing-library/intro/
   - Advocates role based selectors
+    - https://www.w3.org/TR/wai-aria/#role_definitions
   - testid is alternative (might not be applicable when using component library)
   - https://testing-library.com/docs/guide-which-query
 - end2end tests: https://devexpress.github.io/testcafe/

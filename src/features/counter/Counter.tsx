@@ -32,6 +32,7 @@ export function Counter() {
           data-testid='count:value'
           className={styles.value}
           aria-label="Value"
+          role="presentation"
           >{count}</span>
         <button
           data-testid='count:decrement'

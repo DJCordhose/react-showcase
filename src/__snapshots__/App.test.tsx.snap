@@ -28,6 +28,7 @@ exports[`snapshot: renders correctly 1`] = `
           aria-label="Value"
           className="value"
           data-testid="count:value"
+          role="presentation"
         >
           0
         </span>
