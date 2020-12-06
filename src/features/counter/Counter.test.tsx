@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
-import { render } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { store } from "./app/store";
-import App from "./App";
+import React from 'react';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { store } from '../../app/store';
+import { Counter } from "./Counter";
 
 // https://react.i18next.com/misc/testing
 jest.mock('react-i18next', () => ({
@@ -17,12 +17,12 @@ jest.mock('react-i18next', () => ({
   },
 }));
 
-test("smoke: renders something", () => {
-  const { getByText } = render(
+test('smoke: renders something', () => {
+  const { getAllByText } = render(
     <Provider store={store}>
-      <App />
+      <Counter />
     </Provider>
   );
 
-  expect(getByText(/users/i)).toBeInTheDocument();
+  expect(getAllByText(/add/i)).toHaveLength(2);
 });
