@@ -13,10 +13,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Architecture / Tech
 
-https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-online3.pdf
+http://blog.embarc.de//spicker/#9
 
 ### Framework
 - https://2019.stateofjs.com/front-end-frameworks/
+- https://tsh.io/state-of-frontend/#frameworks
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
 - https://reactjs.org/
 
@@ -78,6 +79,10 @@ https://github.com/DJCordhose/spa-workshop/raw/master/Architektur-Spicker9-onlin
 ### Component Libraries
 - https://material-ui.com/
 - https://github.com/microsoft/fluentui
+- Build your own 
+  - https://classic.yarnpkg.com/en/docs/workspaces/
+  - https://lerna.js.org/
+  - https://blog.harveydelaney.com/creating-your-own-react-component-library/
 
 ## Available Scripts
 
