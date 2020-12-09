@@ -2,14 +2,9 @@
 
 [![Build Status](https://travis-ci.org/djcordhose/react-showcase.svg?branch=main)](https://travis-ci.org/djcordhose/react-showcase)
 
+![Screenshot of Application](./reach-showcase.png)
+
 __Given the typical technical and structural requirements of a business application what are the recommended technology choices and architectural nuggets?__
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
-## Creation
-- https://github.com/reduxjs/cra-template-redux-typescript
-  - yarn create react-app my-app --template redux-typescript
-- yarn upgrade typescript --latest
 
 ## Architecture / Tech
 
@@ -22,9 +17,19 @@ http://blog.embarc.de//spicker/#9
 - https://reactjs.org/
 
 
+### Typing
+- https://2019.stateofjs.com/javascript-flavors/
+- https://djcordhose.github.io/spa-workshop/2020_arch.html#/ts
+- https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
+- https://www.typescriptlang.org/
+- https://www.typescriptlang.org/docs/handbook/react.html
+- https://react-typescript-cheatsheet.netlify.app/
+- https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
+
 ### State Management
 - https://2019.stateofjs.com/data-layer/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/innere-struktur
+- https://djcordhose.github.io/spa-workshop/2020_arch.html#/state-management
 - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-state
 - Redux
   - https://redux.js.org/
@@ -32,14 +37,7 @@ http://blog.embarc.de//spicker/#9
 - MobX
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
-
-### Typing
-- https://2019.stateofjs.com/javascript-flavors/
-- https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
-- https://www.typescriptlang.org/
-- https://www.typescriptlang.org/docs/handbook/react.html
-- https://react-typescript-cheatsheet.netlify.app/
-- https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
+  - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-mobx
 
 ### i18n, l10n
 - https://react.i18next.com/
@@ -83,8 +81,20 @@ http://blog.embarc.de//spicker/#9
   - https://classic.yarnpkg.com/en/docs/workspaces/
   - https://lerna.js.org/
   - https://blog.harveydelaney.com/creating-your-own-react-component-library/
+  -  modes of maintenance
+     1. corporate: use is mandatory for all, high risk in quality and suitability of lib
+     2. agile: use recommended, usage shows quality and suitability of lib
+  -  ownership?
 
-## Available Scripts
+## Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+### Creation
+- https://github.com/reduxjs/cra-template-redux-typescript
+  - yarn create react-app my-app --template redux-typescript
+- yarn upgrade typescript --latest
+
 
 In the project directory, you can run:
 
