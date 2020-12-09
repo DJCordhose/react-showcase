@@ -8,7 +8,13 @@ __Given the typical technical and structural requirements of a business applicat
 
 ## Architecture / Tech
 
-http://blog.embarc.de//spicker/#9
+This is my recommended tech stack for a typical enterprise application. Underlying assumptions of most important requirements
+- Long service life (often more than 10 years) and thus good maintainability
+- Development with several teams and over the years changing members
+- Good structuring possibilities for large and complex applications 
+- Fast development speed
+
+http://blog.embarc.de/spicker/#9
 
 ### Framework
 - https://2019.stateofjs.com/front-end-frameworks/
@@ -38,6 +44,12 @@ http://blog.embarc.de//spicker/#9
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
   - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-mobx
+
+### Routing
+- https://github.com/ReactTraining/react-router
+- Routing and Redux
+  - Deprecated: https://github.com/reactjs/react-router-redux
+  - "official" answer - don't: https://stackoverflow.com/questions/36722584/how-to-sync-redux-state-and-url-hash-tag-params/36749963#36749963
 
 ### i18n, l10n
 - https://react.i18next.com/
