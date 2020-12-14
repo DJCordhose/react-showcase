@@ -10,6 +10,7 @@ import {
 import styles from './Counter.module.css';
 
 import { useTranslation } from 'react-i18next';
+import { AriaButton } from './AriaButton';
 
 export function Counter() {
   const count = useSelector(selectCount);
@@ -20,28 +21,14 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
-          data-testid='count:increment'
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-          >
-          +
-        </button>
+        <AriaButton testid='count:increment' label="Increment value" text='+' onClick={() => dispatch(increment())} />
         <span 
           data-testid='count:value'
           className={styles.value}
           aria-label="Value"
           role="presentation"
           >{count}</span>
-        <button
-          data-testid='count:decrement'
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
+        <AriaButton testid='count:decrement' label="Decrement value" text='-' onClick={() => dispatch(decrement())} />
       </div>
       <div className={styles.row}>
         <input
@@ -51,20 +38,8 @@ export function Counter() {
           value={incrementAmount}
           onChange={e => setIncrementAmount(Number.parseInt(e.target.value))}
         />
-        <button
-          className={styles.button}
-          onClick={() =>
-            dispatch(incrementByAmount(incrementAmount ?? 0))
-          }
-        >
-          {t('add', { mode: 'sync'})}
-        </button>
-        <button
-          className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(incrementAmount ?? 0))}
-        >
-          {t('add', { mode: 'async'})}
-        </button>
+        <AriaButton testid='count:incrementByAmount' label={t('add', { mode: 'sync'})} text={t('add', { mode: 'sync'})} onClick={() => dispatch(incrementByAmount(incrementAmount ?? 0))} />
+        <AriaButton testid='count:incrementByAmountAsync' label={t('add', { mode: 'async'})} text={t('add', { mode: 'async'})} onClick={() => dispatch(incrementAsync(incrementAmount ?? 0))} isAsync={true}/>
       </div>
     </div>
   );
