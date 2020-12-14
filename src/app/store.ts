@@ -7,6 +7,7 @@ export const store = configureStore({
   },
 });
 
+// https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,

@@ -40,6 +40,11 @@ http://blog.embarc.de/spicker/#9
 - Redux
   - https://redux.js.org/
   - https://redux-toolkit.js.org/
+    - Motivation
+      - "Configuring a Redux store is too complicated"
+      - "I have to add a lot of packages to get Redux to do anything useful"
+      - "Redux requires too much boilerplate code"
+    - https://redux-toolkit.js.org/usage/usage-with-typescript
 - MobX
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
