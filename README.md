@@ -31,6 +31,16 @@ http://blog.embarc.de/spicker/#9
 - https://www.typescriptlang.org/docs/handbook/react.html
 - https://react-typescript-cheatsheet.netlify.app/
 - https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
+- Advise
+  - Don't overdo it
+    - You can go a long way, but you probably shouldn't: https://github.com/gcanti/fp-ts
+  - Libraries (shared code, also completely internal) can benefit from a lot of typing
+  - Application code mainly benefits from typing
+    - Often simply making a component TS can bring a huge benefit without adding any type information at all
+
+### Linting
+- https://eslint.org/
+- TypeScript can also be used as a linter
 
 ### State Management
 - https://2019.stateofjs.com/data-layer/
@@ -73,23 +83,32 @@ http://blog.embarc.de/spicker/#9
 - https://reactjs.org/docs/testing.html
 - runner for node based unit tests: https://jestjs.io/
   - smoke: does the component render at all (without throwing)?
-  - snapshot (https://jestjs.io/docs/en/snapshot-testing): only advisable to use as golden master when checking against external (REST) API  
+  - snapshot (https://jestjs.io/docs/en/snapshot-testing, https://reactjs.org/docs/test-renderer.html): only advisable to use as golden master when checking against external (REST) API  
   - full: render to HTML and check lifecycle methods
   - logic: pure unit test for reducers
 - https://testing-library.com/docs/react-testing-library/intro/
   - Advocates role based selectors
     - https://www.w3.org/TR/wai-aria/#role_definitions
   - testid is alternative (might not be applicable when using component library)
+    - https://testing-library.com/docs/dom-testing-library/faq
+    - What if my app is localized and I don't have access to the text in test?
+      - This is fairly common. Our first bit of advice is to try to get the default text used in your tests. That will make everything much easier (more than just using this utility). If that's not possible, then you're probably best to just stick with data-testids (which is not bad anyway).
   - https://testing-library.com/docs/guide-which-query
 - end2end tests: https://devexpress.github.io/testcafe/
   - https://testing-library.com/docs/testcafe-testing-library/intro
 - Testing Redux: https://redux.js.org/recipes/writing-tests
   - some basic tests are made obsolete by redux toolkit and TypeScript checking
 - Testing i18n with mocked hook: https://react.i18next.com/misc/testing
+- https://www.browserstack.com
 
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
+- Development in a monorepo
+  - https://lerna.js.org/
+  - https://classic.yarnpkg.com/en/docs/workspaces/
+
+
 
 ### Component Libraries
 - https://material-ui.com/
