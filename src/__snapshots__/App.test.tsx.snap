@@ -52,13 +52,17 @@ exports[`snapshot: renders correctly 1`] = `
           value={2}
         />
         <button
+          aria-label="add"
           className="button"
+          data-testid="count:incrementByAmount"
           onClick={[Function]}
         >
           add
         </button>
         <button
+          aria-label="add"
           className="asyncButton"
+          data-testid="count:incrementByAmountAsync"
           onClick={[Function]}
         >
           add
