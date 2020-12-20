@@ -9,7 +9,7 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="p-5 max-w-sm mx-auto space-x-4">
+    <div className="p-6 max-w-sm mx-auto space-x-5">
       <SwitchLanguage />
       <img src={logo} className="h-80 w-80" alt="logo" />
       <Counter />

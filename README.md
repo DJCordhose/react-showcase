@@ -108,6 +108,7 @@ http://blog.embarc.de/spicker/#9
 
 ![Tesing Sucks](./testing-sucks.gif)
 
+![Tesing Sucks 2](./testing-sucks-2.gif)
 
 ### Build / Deployment
 - `yarn build`
