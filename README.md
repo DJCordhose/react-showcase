@@ -104,6 +104,11 @@ http://blog.embarc.de/spicker/#9
 - Testing i18n with mocked hook: https://react.i18next.com/misc/testing
 - https://www.browserstack.com
 
+### UI Testing is hard if you really mean it
+
+![Tesing Sucks](./testing-sucks.gif)
+
+
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 

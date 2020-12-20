@@ -2,88 +2,94 @@
 
 exports[`snapshot: renders correctly 1`] = `
 <div
-  className="App"
+  className="p-5 max-w-sm mx-auto space-x-4"
 >
-  <header
-    className="App-header"
+  <div
+    className="flex justify-end"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <div>
-      <div
-        className="row"
+    <button
+      aria-label="Change Language"
+      className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+      data-testid="language:switch:de"
+      onClick={[Function]}
+    >
+      de
+    </button>
+    <button
+      aria-label="Change Language"
+      className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+      data-testid="language:switch:en"
+      onClick={[Function]}
+    >
+      en
+    </button>
+  </div>
+  <img
+    alt="logo"
+    className="h-80 w-80"
+    src="logo.svg"
+  />
+  <div
+    className=""
+  >
+    <div
+      className="flex justify-between  border-gray-900 border-2 m-2"
+    >
+      <button
+        aria-label="Increment value"
+        className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+        data-testid="count:increment"
+        onClick={[Function]}
       >
-        <button
-          aria-label="Increment value"
-          className="button"
-          data-testid="count:increment"
-          onClick={[Function]}
-        >
-          +
-        </button>
-        <span
-          aria-label="Value"
-          className="value"
-          data-testid="count:value"
-          role="presentation"
-        >
-          0
-        </span>
-        <button
-          aria-label="Decrement value"
-          className="button"
-          data-testid="count:decrement"
-          onClick={[Function]}
-        >
-          -
-        </button>
-      </div>
-      <div
-        className="row"
+        +
+      </button>
+      <span
+        aria-label="Value"
+        className="px-5 py-2 border-gray-900 border-2  m-2"
+        data-testid="count:value"
+        role="presentation"
       >
-        <input
-          aria-label="Set increment amount"
-          className="textbox"
-          onChange={[Function]}
-          type="number"
-          value={2}
-        />
-        <button
-          aria-label="add"
-          className="button"
-          data-testid="count:incrementByAmount"
-          onClick={[Function]}
-        >
-          add
-        </button>
-        <button
-          aria-label="add"
-          className="asyncButton"
-          data-testid="count:incrementByAmountAsync"
-          onClick={[Function]}
-        >
-          add
-        </button>
-      </div>
+        0
+      </span>
+      <button
+        aria-label="Decrement value"
+        className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+        data-testid="count:decrement"
+        onClick={[Function]}
+      >
+        -
+      </button>
     </div>
-    <p>
+    <div
+      className="flex justify-between border-gray-900 border-2 m-2"
+    >
+      <input
+        aria-label="Set increment amount"
+        className="px-2 py-2 m-2 w-20"
+        onChange={[Function]}
+        type="number"
+        value={2}
+      />
       <button
+        aria-label="add"
+        className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+        data-testid="count:incrementByAmount"
         onClick={[Function]}
       >
-        de
+        add
       </button>
       <button
+        aria-label="add"
+        className="bg-gray-100 px-2 py-2 cursor-pointer border-gray-900 border-2 w-20 mx-2 my-2 "
+        data-testid="count:incrementByAmountAsync"
         onClick={[Function]}
       >
-        en
+        add
       </button>
-    </p>
-    <p>
-      users
-    </p>
-  </header>
+    </div>
+  </div>
+  <p>
+    users
+  </p>
 </div>
 `;

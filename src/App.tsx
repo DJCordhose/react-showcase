@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { SwitchLanguage } from "./SwitchLanguage";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="p-5 max-w-sm mx-auto space-x-4">
