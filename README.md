@@ -131,6 +131,7 @@ http://blog.embarc.de/spicker/#9
   - https://github.com/nilshartmann/tailwind-playground
   - yarn add tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
   - https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+  - https://tailwindcss.com/docs/optimizing-for-production
 
 ## Create React App
 

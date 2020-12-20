@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "yarn tailwind:prepare && react-scripts start",
-    "build": "yarn tailwind:prepare && react-scripts build",
+    "build": "cross-env NODE_ENV=production yarn tailwind:prepare && react-scripts build",
     "test": "yarn tailwind:prepare && react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "autoprefixer": "9",
+    "cross-env": "^7.0.3",
     "postcss-cli": "7",
     "serve": "^11.3.2",
     "testcafe": "^1.9.4"
