@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import './assets/main.css';
 import App from "./App";
 import LoadingIndicator from "./LoadingIndicator";
 import { store } from "./app/store";
