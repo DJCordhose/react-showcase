@@ -16,6 +16,9 @@ This is my recommended tech stack for a typical enterprise application. Underlyi
 
 http://blog.embarc.de/spicker/#9
 
+### Dependency Management
+- https://classic.yarnpkg.com/en/
+
 ### Framework
 - https://2019.stateofjs.com/front-end-frameworks/
 - https://tsh.io/state-of-frontend/#frameworks
@@ -109,7 +112,6 @@ http://blog.embarc.de/spicker/#9
   - https://classic.yarnpkg.com/en/docs/workspaces/
 
 
-
 ### Component Libraries
 - https://material-ui.com/
 - https://github.com/microsoft/fluentui
@@ -121,6 +123,14 @@ http://blog.embarc.de/spicker/#9
      1. corporate: use is mandatory for all, high risk in quality and suitability of lib
      2. agile: use recommended, usage shows quality and suitability of lib
   -  ownership?
+
+### CSS Framework
+- https://tailwindcss.com
+  - https://tailwindcss.com/docs/guides/create-react-app (approach not taken here, but dependencies are important)
+  - https://www.smashingmagazine.com/2020/02/tailwindcss-react-project/ (approach taken)
+  - https://github.com/nilshartmann/tailwind-playground
+  - yarn add tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+  - https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
 
 ## Create React App
 
