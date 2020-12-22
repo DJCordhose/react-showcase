@@ -34,6 +34,7 @@
     "eject": "react-scripts eject",
     "serve": "serve -s build",
     "e2e": "testcafe chrome testcafe/",
+    "e2e:crawl": "testcafe chrome testcafe/App.crawl.ts",
     "e2e:watch": "testcafe chrome testcafe/ -L",
     "e2e:debug": "testcafe chrome testcafe/ --debug-on-fail",
     "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css"
