@@ -1,4 +1,3 @@
-import { repeat } from 'core-js/fn/string';
 import { Selector } from 'testcafe';
 
 fixture`App Browser Crawling`
@@ -8,8 +7,8 @@ const inputs = Selector('input');
 const buttons = Selector('button');
 const appEl = Selector('#cnt-app');
 
-// const REPEAT_INPUT = 100;
-const REPEAT_INPUT = 10;
+const REPEAT_INPUT = 100;
+// const REPEAT_INPUT = 10;
 
 async function takeAppScreenshot(t) {
     await t.takeElementScreenshot(appEl);

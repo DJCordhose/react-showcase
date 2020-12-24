@@ -35,7 +35,7 @@
     "e2e": "testcafe chrome e2e/",
     "e2e:watch": "testcafe chrome e2e/ -L",
     "e2e:debug": "testcafe chrome e2e/ --debug-on-fail",
-    "e2e:crawl": "testcafe chrome App.crawl.ts",
+    "e2e:crawl": "testcafe chrome:headless App.crawl.ts",
     "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
