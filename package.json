@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
-    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/dom": "^7.28.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -17,7 +16,7 @@
     "@types/react-redux": "^7.1.7",
     "i18next": "^19.8.4",
     "i18next-xhr-backend": "^3.2.2",
-    "postcss": "7",
+    "postcss": "8.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.7.4",
@@ -33,10 +32,10 @@
     "test": "yarn tailwind:prepare && react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "e2e": "testcafe chrome testcafe/",
-    "e2e:crawl": "testcafe chrome testcafe/App.crawl.ts",
-    "e2e:watch": "testcafe chrome testcafe/ -L",
-    "e2e:debug": "testcafe chrome testcafe/ --debug-on-fail",
+    "e2e": "testcafe chrome e2e/",
+    "e2e:watch": "testcafe chrome e2e/ -L",
+    "e2e:debug": "testcafe chrome e2e/ --debug-on-fail",
+    "e2e:crawl": "testcafe chrome App.crawl.ts",
     "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
@@ -55,9 +54,9 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "9",
+    "autoprefixer": "10.1.0",
     "cross-env": "^7.0.3",
-    "postcss-cli": "7",
+    "postcss-cli": "8.3.1",
     "serve": "^11.3.2",
     "testcafe": "^1.9.4"
   }

@@ -12,8 +12,8 @@ const valueEl = screen.getByRole('presentation');
 const incrementBtn = screen.getByLabelText('Increment value');
 const decrementBtn = screen.getByLabelText('Decrement value');
 const amountInput = screen.getByLabelText('Set increment amount')
-const addAmountBtn = screen.getByLabelText('Add Amount (sync)');
-const addAmountBtnAsync = screen.getByLabelText('Add Amount (async)');
+const addAmountBtn = screen.getByLabelText('Add Users (sync)');
+const addAmountBtnAsync = screen.getByLabelText('Add Users (async)');
 
 test('increase', async t => {
 
@@ -33,19 +33,13 @@ test('decrease', async t => {
 
 });
 
-// uses screenshot to understand what is going on
-// https://devexpress.github.io/testcafe/documentation/guides/advanced-guides/screenshots-and-videos.html
 test('add amount', async t => {
     const increment = 9;
     const initialValue = Number(await valueEl.innerText)
 
     await t.takeElementScreenshot(valueEl);
     await t.expect(initialValue).eql(0);
-    // this is needed in order not to add the 9, but replace existing text 
-    // await t.selectText(amountInput).pressKey("delete");
-    // or at least
-    await t.selectText(amountInput);
-    await t.typeText(amountInput, String(increment));
+    await t.typeText(amountInput, String(increment), { replace: true });
     await t.click(addAmountBtn);
     await t.takeElementScreenshot(valueEl);
     const newValue = Number(await valueEl.innerText)
@@ -60,8 +54,7 @@ test('add amount async', async t => {
     const initialValue = Number(await valueEl.innerText)
 
     await t.expect(initialValue).eql(0);
-    await t.selectText(amountInput);
-    await t.typeText(amountInput, String(increment));
+    await t.typeText(amountInput, String(increment), { replace: true });
     await t.click(addAmountBtnAsync);
 
     await t.wait(1500);

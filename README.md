@@ -132,10 +132,6 @@ http://blog.embarc.de/spicker/#9
 
 ### CSS Framework
 - https://tailwindcss.com
-  - https://tailwindcss.com/docs/guides/create-react-app (approach not taken here, but dependencies are important)
-  - https://www.smashingmagazine.com/2020/02/tailwindcss-react-project/ (approach taken)
-  - https://github.com/nilshartmann/tailwind-playground
-  - yarn add tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
   - https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
   - https://tailwindcss.com/docs/optimizing-for-production
 
