@@ -7,8 +7,8 @@ const inputs = Selector('input');
 const buttons = Selector('button');
 const appEl = Selector('#cnt-app');
 
-const REPEAT_INPUT = 100;
-// const REPEAT_INPUT = 10;
+// const REPEAT_INPUT = 100;
+const REPEAT_INPUT = 10;
 
 async function takeAppScreenshot(t) {
     await t.takeElementScreenshot(appEl);
@@ -47,8 +47,9 @@ test('chaos crawl', async t => {
         const type = input.getAttribute('type');
         if (type === 'number') {
             for (let j =0; j < REPEAT_INPUT; j++) {
-                const randomInput = String(randomInt());
-                // const randomInput = String(randomInt(1e+10));
+                // const randomInput = String(randomInt());
+                const randomInput = String(randomInt(1e+10));
+                // const randomInput = String(randomInt(1e+15));
                 // const randomInput = String(randomInt(1e+19));
                 await t.typeText(input, randomInput, { replace: true });
                 await clickRandomButtons(t);
