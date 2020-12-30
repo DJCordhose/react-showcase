@@ -104,11 +104,17 @@ http://blog.embarc.de/spicker/#9
 - Testing i18n with mocked hook: https://react.i18next.com/misc/testing
 - https://www.browserstack.com
 
-### UI Testing is hard if you really mean it
+### Visual Regression Tests
 
+All functional tests may pass, but application might still be ugly or even broken
 ![Tesing Sucks](./testing-sucks.gif)
 
 ![Tesing Sucks 2](./testing-sucks-2.gif)
+
+Visual regressions test against a golden master 
+* create golder master: `yarn e2e:visual:snapshot`
+* create test snapshot: `yarn e2e:visual:test`
+* compare, create report and fail if deviation is above threshold: `yarn e2e:visual:compare`
 
 ### Build / Deployment
 - `yarn build`
