@@ -24,19 +24,23 @@
     "react-scripts": "4.0.1",
     "react-test-renderer": "^17.0.1",
     "tailwindcss": "^2.0.2",
+    "testcafe-blink-diff": "^0.4.8",
     "typescript": "~4.1.2"
   },
   "scripts": {
     "start": "yarn tailwind:prepare && react-scripts start",
     "build": "cross-env NODE_ENV=production yarn tailwind:prepare && react-scripts build",
     "test": "yarn tailwind:prepare && react-scripts test",
+    "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
     "e2e": "testcafe chrome e2e/",
     "e2e:watch": "testcafe chrome e2e/ -L",
     "e2e:debug": "testcafe chrome e2e/ --debug-on-fail",
     "e2e:crawl": "testcafe chrome:headless App.crawl.ts",
-    "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "e2e:visual:snapshot": "testcafe chrome:headless e2e/App.visual.test.ts -s e2e/screenshots --take-snapshot goldmaster",
+    "e2e:visual:test": "testcafe chrome:headless e2e/App.visual.test.ts -s e2e/screenshots --take-snapshot test",
+    "e2e:visual:compare": "testcafe-blink-diff e2e/screenshots --compare goldmaster:test --threshold 0.0005"
   },
   "eslintConfig": {
     "extends": "react-app"
