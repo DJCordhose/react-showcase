@@ -34,13 +34,13 @@
     "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "e2e": "testcafe chrome e2e/",
-    "e2e:watch": "testcafe chrome e2e/ -L",
-    "e2e:debug": "testcafe chrome e2e/ --debug-on-fail",
-    "e2e:crawl": "testcafe chrome:headless App.crawl.ts",
-    "e2e:visual:snapshot": "testcafe chrome:headless e2e/App.visual.test.ts -s e2e/screenshots --take-snapshot goldmaster",
-    "e2e:visual:test": "testcafe chrome:headless e2e/App.visual.test.ts -s e2e/screenshots --take-snapshot test",
-    "e2e:visual:compare": "testcafe-blink-diff e2e/screenshots --compare goldmaster:test --threshold 0.0005"
+    "e2e": "testcafe chrome test/e2e/",
+    "e2e:watch": "testcafe chrome test/e2e/ -L",
+    "e2e:debug": "testcafe chrome test/e2e/ --debug-on-fail",
+    "e2e:crawl": "testcafe chrome:headless test/regression/App.crawl.ts",
+    "e2e:visual:snapshot": "testcafe chrome:headless test/regression/App.visual.test.ts -s test/regression/screenshots --take-snapshot goldmaster",
+    "e2e:visual:test": "testcafe chrome:headless test/regression/App.visual.test.ts -s test/regression/screenshots --take-snapshot test",
+    "e2e:visual:compare": "testcafe-blink-diff test/regression/screenshots --compare goldmaster:test --threshold 0.0005"
   },
   "eslintConfig": {
     "extends": "react-app"

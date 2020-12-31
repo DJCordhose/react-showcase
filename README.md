@@ -97,12 +97,17 @@ http://blog.embarc.de/spicker/#9
     - What if my app is localized and I don't have access to the text in test?
       - This is fairly common. Our first bit of advice is to try to get the default text used in your tests. That will make everything much easier (more than just using this utility). If that's not possible, then you're probably best to just stick with data-testids (which is not bad anyway).
   - https://testing-library.com/docs/guide-which-query
-- end2end tests: https://devexpress.github.io/testcafe/
-  - https://testing-library.com/docs/testcafe-testing-library/intro
 - Testing Redux: https://redux.js.org/recipes/writing-tests
   - some basic tests are made obsolete by redux toolkit and TypeScript checking
 - Testing i18n with mocked hook: https://react.i18next.com/misc/testing
 - https://www.browserstack.com
+
+### End-to-End-Tests
+* Testcafe
+  - https://devexpress.github.io/testcafe/
+  - https://testing-library.com/docs/testcafe-testing-library/intro
+  - https://devexpress.github.io/testcafe/media/team-blog/randomize-your-end-to-end-tests-how-to-generate-input-data-for-testcafe.html
+
 
 ### Visual Regression Tests
 

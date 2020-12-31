@@ -8,7 +8,7 @@
 # testing
 /coverage
 /screenshots
-/e2e/screenshots/**/test.png
+# test/regression/screenshots/**/test.png
 /generated
 
 # production
