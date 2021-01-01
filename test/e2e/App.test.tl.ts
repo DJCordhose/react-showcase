@@ -14,6 +14,7 @@ const decrementBtn = screen.getByLabelText('Decrement value');
 const amountInput = screen.getByLabelText('Set increment amount')
 const addAmountBtn = screen.getByLabelText('Add Users (sync)');
 const addAmountBtnAsync = screen.getByLabelText('Add Users (async)');
+const loadBtn = screen.getByLabelText('Load data from server');
 
 test('increase', async t => {
 
@@ -57,4 +58,13 @@ test('add amount async', async t => {
 
     const newValue = Number(await valueEl.innerText)
     await t.expect(newValue).eql(initialValue + increment);
+});
+
+test('load from server', async t => {
+    const initialValue = Number(await valueEl.innerText)
+
+    await t.expect(initialValue).eql(0);
+    await t.click(loadBtn);
+    const newValue = Number(await valueEl.innerText)
+    await t.expect(newValue).eql(1000000);
 });

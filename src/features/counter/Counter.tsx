@@ -5,6 +5,7 @@ import {
   increment,
   incrementByAmount,
   incrementAsync,
+  loadFromServer,
   selectCount,
   selectInProgress,
 } from "./counterSlice";
@@ -62,7 +63,17 @@ export function Counter() {
           label={t("add", { mode: "async" })}
           text={t("add", { mode: "async" })}
           onClick={() => dispatch(incrementAsync(incrementAmount ?? 0))}
-          inProgress={inProgress}
+          inProgress={inProgress['ADD_ASYNC']}
+        />
+      </div>
+      <div className="flex justify-center border-gray-900 border-2 m-2">
+        <AriaButton
+          testid="count:load"
+          label={t("load")}
+          text={t("load")}
+          flat={true}
+          onClick={() => dispatch(loadFromServer())}
+          inProgress={inProgress['LOAD']}
         />
       </div>
     </div>

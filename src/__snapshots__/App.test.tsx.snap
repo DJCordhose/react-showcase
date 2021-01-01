@@ -107,6 +107,22 @@ exports[`snapshot: renders correctly 1`] = `
         add
       </button>
     </div>
+    <div
+      className="flex justify-center border-gray-900 border-2 m-2"
+    >
+      <button
+        aria-label="load"
+        className="
+      bg-gray-100 border-2 border-gray-900
+      hover:border-gray-500 hover:bg-gray-200 
+      active:border-gray-200 active:bg-gray-400 
+      px-2 py-2 w-100 mx-2 my-2 "
+        data-testid="count:load"
+        onClick={[Function]}
+      >
+        load
+      </button>
+    </div>
   </div>
   <p>
     users
