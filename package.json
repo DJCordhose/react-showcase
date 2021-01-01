@@ -36,7 +36,7 @@
     "serve": "serve -s build",
     "e2e": "testcafe chrome test/e2e/",
     "e2e:watch": "testcafe chrome test/e2e/ -L",
-    "e2e:debug": "testcafe chrome test/e2e/ --debug-on-fail",
+    "e2e:debug": "testcafe chrome test/e2e/ -s path=test/e2e/screenshots,takeOnFails=true --debug-on-fail",
     "e2e:crawl": "testcafe chrome:headless test/regression/App.crawl.ts",
     "e2e:visual:snapshot": "testcafe chrome:headless test/regression/App.visual.test.ts -s test/regression/screenshots --take-snapshot goldmaster",
     "e2e:visual:test": "testcafe chrome:headless test/regression/App.visual.test.ts -s test/regression/screenshots --take-snapshot test",

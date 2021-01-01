@@ -37,15 +37,11 @@ test('add amount', async t => {
     const increment = 9;
     const initialValue = Number(await valueEl.innerText)
 
-    await t.takeElementScreenshot(valueEl);
     await t.expect(initialValue).eql(0);
     await t.typeText(amountInput, String(increment), { replace: true });
     await t.click(addAmountBtn);
-    await t.takeElementScreenshot(valueEl);
     const newValue = Number(await valueEl.innerText)
     await t.expect(newValue).eql(initialValue + increment);
-
-    await t.takeScreenshot();
 });
 
 
