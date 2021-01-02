@@ -27,10 +27,10 @@ async function clickAllButtons(t) {
     }
 }
 
-async function clickRandomButtons(t, repeatitions?: number) {
+async function clickRandomButtons(t, repetitions?: number) {
     const elementsCount = await buttons.count;
-    repeatitions = repeatitions ?? elementsCount;
-    for (let j =0; j < repeatitions; j++) {
+    repetitions = repetitions ?? elementsCount;
+    for (let j =0; j < repetitions; j++) {
         const randomButtonIndex = randomInt(elementsCount);
         const button = await buttons.nth(randomButtonIndex)();
         await t.click(button);
@@ -47,8 +47,8 @@ test('chaos crawl', async t => {
         const type = input.getAttribute('type');
         if (type === 'number') {
             for (let j =0; j < REPEAT_INPUT; j++) {
-                // const randomInput = String(randomInt());
-                const randomInput = String(randomInt(1e+10));
+                const randomInput = String(randomInt());
+                // const randomInput = String(randomInt(1e+10));
                 // const randomInput = String(randomInt(1e+15));
                 // const randomInput = String(randomInt(1e+19));
                 await t.typeText(input, randomInput, { replace: true });
