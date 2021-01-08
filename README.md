@@ -140,6 +140,8 @@ Visual regressions test against a golden master
      1. corporate: use is mandatory for all, high risk in quality and suitability of lib
      2. agile: use recommended, usage shows quality and suitability of lib
   -  ownership?
+  -  What to publish?
+     - modules referenced via "exports" can include modern syntax: https://twitter.com/_developit/status/1347296236282523648
 
 ### CSS Framework
 - https://tailwindcss.com
