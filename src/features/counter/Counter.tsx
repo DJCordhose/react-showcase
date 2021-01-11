@@ -22,7 +22,7 @@ export function Counter() {
 
   return (
     <div className="">
-      <div className="flex justify-between  border-gray-900 border-2 m-2 overflow-hidden">
+      <div className="flex justify-between border-gray-900 border-2 m-2 overflow-hidden">
         <AriaButton
           testid="count:increment"
           label="Increment value"

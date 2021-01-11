@@ -61,10 +61,9 @@ export const incrementAsync = (amount: number): AppThunk => dispatch => {
 export const loadFromServer = (): AppThunk => async dispatch => {
   dispatch(startOperation('LOAD'));
   try {
-    const response = await fetch("/api/users.json")
+    const response = await fetch("/api/users.json");
     const json = await response.json();
     dispatch(setValue(json.count));
-  
   } catch (error) {
     console.error("Fetch failed", error);
   } finally {
