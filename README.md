@@ -45,6 +45,11 @@ http://blog.embarc.de/spicker/#9
 - https://eslint.org/
 - TypeScript can also be used as a linter
 
+### Structure
+- Smart Components: `Counter.tsx`
+- Dumb Components: `AriaButton.tsx`
+- http://blog.embarc.de/spicker/#9
+
 ### State Management
 - https://2019.stateofjs.com/data-layer/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/innere-struktur
@@ -156,7 +161,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - https://github.com/reduxjs/cra-template-redux-typescript
   - yarn create react-app my-app --template redux-typescript
 - yarn upgrade typescript --latest
-
 
 In the project directory, you can run:
 
