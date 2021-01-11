@@ -8,6 +8,7 @@ import {
 
 import { useTranslation } from "react-i18next";
 import { AriaButton } from "../../AriaButton";
+import { FlexContainer } from "../../FlexContainer";
 
 export function IncrementByAmount() {
   const inProgress = useSelector(selectInProgress);
@@ -16,7 +17,7 @@ export function IncrementByAmount() {
   const { t } = useTranslation();
 
   return (
-      <div className="flex justify-between border-gray-900 border-2 m-2 overflow-hidden">
+      <FlexContainer>
         <input
           className="px-2 py-2 m-2 w-20"
           aria-label="Set increment amount"
@@ -37,6 +38,6 @@ export function IncrementByAmount() {
           onClick={() => dispatch(incrementAsync(incrementAmount ?? 0))}
           inProgress={inProgress['ADD_ASYNC']}
         />
-      </div>
+      </FlexContainer>
   );
 }
