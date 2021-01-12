@@ -16,12 +16,14 @@ export function IncrementByAmount() {
   const [incrementAmount, setIncrementAmount] = useState<number>(2);
   const { t } = useTranslation();
 
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode
   return (
       <FlexContainer>
         <input
           className="px-2 py-2 m-2 w-20"
           aria-label="Set increment amount"
           type="number"
+          inputMode='numeric'
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(Number.parseInt(e.target.value))}
         />
