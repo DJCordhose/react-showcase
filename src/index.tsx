@@ -1,20 +1,30 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom";
-import './assets/main.css';
-import App from "./App";
-import LoadingIndicator from "./LoadingIndicator";
+import "./assets/main.css";
+import LoadingIndicator from "./lib/LoadingIndicator";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 
 import "./i18n";
 
+// https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+const App = lazy(() => import("./App"));
+const Hello = lazy(() => import("./Hello"));
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Suspense fallback={<LoadingIndicator title='Loading translations' />}>
-        <App />
-      </Suspense>
+      <Router>
+        <Suspense fallback={<LoadingIndicator title="Loading..." />}>
+          <Switch>
+            <Route exact path="/" component={App} />
+            <Route path="/hello" component={Hello} />
+          </Switch>
+        </Suspense>
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

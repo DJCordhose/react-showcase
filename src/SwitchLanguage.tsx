@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "./AriaButton";
+import { AriaButton } from "./lib/AriaButton";
 
 export function SwitchLanguage() {
   const { t, i18n } = useTranslation();

@@ -5,6 +5,7 @@ import { selectCount } from "./features/counter/counterSlice";
 
 import { useTranslation } from "react-i18next";
 import { SwitchLanguage } from "./SwitchLanguage";
+import { Nav } from "./Nav";
 
 function App() {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div id='cnt-app' className="p-6 max-w-sm mx-auto space-x-5">
+      <Nav />
       <SwitchLanguage />
       <Counter />
       <p>

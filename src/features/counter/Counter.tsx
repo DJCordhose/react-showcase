@@ -9,9 +9,9 @@ import {
 } from "./counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../AriaButton";
+import { AriaButton } from "../../lib/AriaButton";
 import { IncrementByAmount } from "./IncrementByAmount";
-import { FlexContainer } from "../../FlexContainer";
+import { FlexContainer } from "../../lib/FlexContainer";
 
 export function Counter() {
   const count = useSelector(selectCount);

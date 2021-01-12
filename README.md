@@ -107,6 +107,7 @@ http://blog.embarc.de/spicker/#9
   - some basic tests are made obsolete by redux toolkit and TypeScript checking
 - Testing i18n with mocked hook: https://react.i18next.com/misc/testing
 - https://www.browserstack.com
+- https://fakerapi.it/en
 
 ### End-to-End-Tests
 * Testcafe

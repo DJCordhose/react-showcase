@@ -7,8 +7,8 @@ import {
 } from "./counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../AriaButton";
-import { FlexContainer } from "../../FlexContainer";
+import { AriaButton } from "../../lib/AriaButton";
+import { FlexContainer } from "../../lib/FlexContainer";
 
 export function IncrementByAmount() {
   const inProgress = useSelector(selectInProgress);
