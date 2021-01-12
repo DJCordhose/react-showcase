@@ -22,6 +22,7 @@ http://blog.embarc.de/spicker/#9
 ### Framework
 - https://2019.stateofjs.com/front-end-frameworks/
 - https://tsh.io/state-of-frontend/#frameworks
+- https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
 - https://reactjs.org/
 
@@ -45,7 +46,7 @@ http://blog.embarc.de/spicker/#9
 - https://eslint.org/
 - TypeScript can also be used as a linter
 
-### Structure
+### Structure within a module
 - Smart Components: `Counter.tsx`
 - Dumb Components: `AriaButton.tsx`
 - http://blog.embarc.de/spicker/#9
@@ -129,10 +130,25 @@ Visual regressions test against a golden master
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
-- Development in a monorepo
-  - https://lerna.js.org/
-  - https://classic.yarnpkg.com/en/docs/workspaces/
 
+### Micro-Frontends
+- https://micro-frontends.org/
+- https://the-tractor.store/
+  - https://github.com/naltatis/micro-frontends-in-action-code
+- Server-Side Integration
+  - SSI (Server-Side Include): http://nginx.org/en/docs/http/ngx_http_ssi_module.html 
+  - Pure Verticals: Separate apps using classic links
+- Client-Side Integration
+  - iFrame: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+  - WebComponent: https://developer.mozilla.org/en-US/docs/Web/Web_Components
+  - AppShell: https://developers.google.com/web/fundamentals/architecture/app-shell
+  - Modular Monolith
+    - Development in a monorepo
+      - https://lerna.js.org/
+      - https://classic.yarnpkg.com/en/docs/workspaces/
+    - Code Splitting: 
+      - https://create-react-app.dev/docs/code-splitting
+      - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
 ### Component Libraries
 - https://material-ui.com/
