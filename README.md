@@ -16,8 +16,7 @@ This is my recommended tech stack for a typical enterprise application. Underlyi
 
 http://blog.embarc.de/spicker/#9
 
-### Dependency Management
-- https://classic.yarnpkg.com/en/
+## Most important Architectural decisions
 
 ### Framework
 - https://2019.stateofjs.com/front-end-frameworks/
@@ -25,7 +24,6 @@ http://blog.embarc.de/spicker/#9
 - https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
 - https://reactjs.org/
-
 
 ### Typing
 - https://2019.stateofjs.com/javascript-flavors/
@@ -41,15 +39,6 @@ http://blog.embarc.de/spicker/#9
   - Libraries (shared code, also completely internal) can benefit from a lot of typing
   - Application code mainly benefits from typing
     - Often simply making a component TS can bring a huge benefit without adding any type information at all
-
-### Linting
-- https://eslint.org/
-- TypeScript can also be used as a linter
-
-### Structure within a module
-- Smart Components: `Counter.tsx`
-- Dumb Components: `AriaButton.tsx`
-- http://blog.embarc.de/spicker/#9
 
 ### State Management
 - https://2019.stateofjs.com/data-layer/
@@ -68,6 +57,39 @@ http://blog.embarc.de/spicker/#9
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
   - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-mobx
+
+### Micro-Frontends
+- https://micro-frontends.org/
+- https://the-tractor.store/
+  - https://github.com/naltatis/micro-frontends-in-action-code
+- Server-Side Integration
+  - SSI (Server-Side Include): http://nginx.org/en/docs/http/ngx_http_ssi_module.html 
+  - Pure Verticals: Separate apps using classic links
+- Client-Side Integration
+  - iFrame: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+  - WebComponent: https://developer.mozilla.org/en-US/docs/Web/Web_Components
+  - AppShell: https://developers.google.com/web/fundamentals/architecture/app-shell
+  - Modular Monolith
+    - Development in a monorepo
+      - https://lerna.js.org/
+      - https://classic.yarnpkg.com/en/docs/workspaces/
+    - Code Splitting: 
+      - https://create-react-app.dev/docs/code-splitting
+      - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+
+### Structure within a module
+- Smart Components: `Counter.tsx`
+- Dumb Components: `AriaButton.tsx`
+- http://blog.embarc.de/spicker/#9
+
+## Less important technical recommendations
+### Dependency Management
+- https://classic.yarnpkg.com/en/
+
+### Linting
+- https://eslint.org/
+- TypeScript can also be used as a linter
+
 
 ### Routing
 - https://github.com/ReactTraining/react-router
@@ -131,25 +153,6 @@ Visual regressions test against a golden master
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
-
-### Micro-Frontends
-- https://micro-frontends.org/
-- https://the-tractor.store/
-  - https://github.com/naltatis/micro-frontends-in-action-code
-- Server-Side Integration
-  - SSI (Server-Side Include): http://nginx.org/en/docs/http/ngx_http_ssi_module.html 
-  - Pure Verticals: Separate apps using classic links
-- Client-Side Integration
-  - iFrame: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
-  - WebComponent: https://developer.mozilla.org/en-US/docs/Web/Web_Components
-  - AppShell: https://developers.google.com/web/fundamentals/architecture/app-shell
-  - Modular Monolith
-    - Development in a monorepo
-      - https://lerna.js.org/
-      - https://classic.yarnpkg.com/en/docs/workspaces/
-    - Code Splitting: 
-      - https://create-react-app.dev/docs/code-splitting
-      - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
 ### Component Libraries
 - https://material-ui.com/
