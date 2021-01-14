@@ -19,14 +19,14 @@ http://blog.embarc.de/spicker/#9
 ## Most important Architectural decisions
 
 ### Framework
-- https://2019.stateofjs.com/front-end-frameworks/
+- https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/
 - https://tsh.io/state-of-frontend/#frameworks
 - https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
 - https://reactjs.org/
 
 ### Typing
-- https://2019.stateofjs.com/javascript-flavors/
+- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/ts
 - https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
 - https://www.typescriptlang.org/
@@ -41,7 +41,7 @@ http://blog.embarc.de/spicker/#9
     - Often simply making a component TS can bring a huge benefit without adding any type information at all
 
 ### State Management
-- https://2019.stateofjs.com/data-layer/
+- https://2020.stateofjs.com/en-US/technologies/datalayer/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/innere-struktur
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/state-management
 - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-state
@@ -109,7 +109,7 @@ http://blog.embarc.de/spicker/#9
 ### Testing
 - `yarn test`
 - `yarn e2e`
-- https://2019.stateofjs.com/testing/
+- https://2020.stateofjs.com/en-US/technologies/testing/
 - https://nilshartmann.github.io/react-training/2020_1211_react.html#/118
 - https://reactjs.org/docs/testing.html
 - runner for node based unit tests: https://jestjs.io/
