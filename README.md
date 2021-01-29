@@ -53,11 +53,20 @@ http://blog.embarc.de/spicker/#9
       - "I have to add a lot of packages to get Redux to do anything useful"
       - "Redux requires too much boilerplate code"
     - https://redux-toolkit.js.org/usage/usage-with-typescript
+    - https://redux.js.org/faq/code-structure#how-should-i-split-my-logic-between-reducers-and-action-creators-where-should-my-business-logic-go
+      - "Find the balance between these two extremes, and you will master Redux."
+    - Effects ngrx-style: https://github.com/davidkpiano/useEffectReducer
 - MobX
   - https://mobx.js.org/react-integration.html
   - https://michel.codes/blogs/mobx6
   - https://nilshartmann.github.io/react-training/2020_1211_react.html#/t-mobx
-
+- XState
+  - https://github.com/davidkpiano/xstate
+  - https://github.com/davidkpiano/xstate/tree/master/packages/xstate-react
+  - https://codesandbox.io/s/xstate-react-typescript-template-wjdvn?file=/src/index.tsx
+- Comparison based on single/multi and direct/indirect: https://twitter.com/DavidKPiano/status/1353712136372039682
+  - "state management is the wild west and the categories aren't mutually exclusive (and can become each other with abstractions/convention), so it's a rough categorization"
+  
 ### Micro-Frontends
 - https://micro-frontends.org/
 - https://the-tractor.store/
