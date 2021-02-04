@@ -39,6 +39,7 @@ http://blog.embarc.de/spicker/#9
   - Libraries (shared code, also completely internal) can benefit from a lot of typing
   - Application code mainly benefits from typing
     - Often simply making a component TS can bring a huge benefit without adding any type information at all
+- Type vs Interface: https://nilshartmann.github.io/typescript-intro/2021_js_ts.html#type-vs-interface
 
 ### State Management
 - https://2020.stateofjs.com/en-US/technologies/datalayer/
