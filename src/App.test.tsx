@@ -4,6 +4,7 @@ import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // https://react.i18next.com/misc/testing
 jest.mock("react-i18next", () => ({
@@ -21,7 +22,9 @@ jest.mock("react-i18next", () => ({
 test("smoke: renders something", () => {
   const { getByText } = render(
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   );
 
@@ -33,7 +36,9 @@ test("snapshot: renders correctly", () => {
   const tree = renderer
     .create(
       <Provider store={store}>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </Provider>
     )
     .toJSON();
