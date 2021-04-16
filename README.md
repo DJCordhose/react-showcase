@@ -10,11 +10,25 @@ __Given the typical technical and structural requirements of a business applicat
 
 This is my recommended tech stack for a typical enterprise application. Underlying assumptions of most important requirements
 - Long service life (often more than 10 years) and thus good maintainability
-- Development with several teams and over the years changing members
+- Development with several teams and members changing over the years 
 - Good structuring possibilities for large and complex applications 
 - Fast development speed
 
 http://blog.embarc.de/spicker/#9
+
+
+## Is architecture just clueless talking and useless Visios?
+
+Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean _hard to change, but somewhat risky_, _restricting what can be built reasonably_, _having the potential to make the endeavor fail_. 
+
+![Architecture](./architecture.png)
+
+Idea of Architectural Nuggets taken from: https://pkruchten.files.wordpress.com/2020/06/kruchten-2020-northrop-award.pdf
+
+Also from Kruchten: _The life of a software architect is a long and sometimes
+painful succession of suboptimal decisions taken partly in the dark._
+
+Definition of architecture inspired by: https://martinfowler.com/architecture/
 
 ## Most important Architectural decisions
 
@@ -91,6 +105,20 @@ http://blog.embarc.de/spicker/#9
 - Smart Components: `Counter.tsx`
 - Dumb Components: `AriaButton.tsx`
 - http://blog.embarc.de/spicker/#9
+
+### Testing Style
+
+![Role of UI](./role-of-ui.png)
+
+* UI is the most volatile, make sure you do not constrain yourself too much
+* UI logic is less volatile and might require a bit more testing
+* UI obviously is about how graphical elements look like and how they behave
+* E2E-Tests are most natural for testing (in the ideal world only, unfortunately)
+* They can be slow and brittle and need addition with other forms of testing (order expresses imortance)
+  * manual
+  * type checker
+  * unit
+  * integration
 
 ## Less important technical recommendations
 ### Dependency Management
