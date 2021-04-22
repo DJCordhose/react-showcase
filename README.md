@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/djcordhose/react-showcase.svg?branch=main)](https://travis-ci.org/djcordhose/react-showcase)
 
-![Screenshot of Application](./reach-showcase.png)
+![Screenshot of Application](./react-showcase.png)
 
 __Given the typical technical and structural requirements of a business application what are the recommended technology choices and architectural nuggets?__
 
