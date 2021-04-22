@@ -17,7 +17,7 @@ const Hello = lazy(() => import("./Hello"));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Suspense fallback={<LoadingIndicator title="Loading..." />}>
           <Switch>
             <Route exact path="/" component={App} />

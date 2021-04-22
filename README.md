@@ -191,6 +191,7 @@ Visual regressions test against a golden master
 ### Build / Deployment
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
+- https://create-react-app.dev/docs/deployment/#github-pages
 
 ### Component Libraries
 - https://material-ui.com/

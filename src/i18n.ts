@@ -35,7 +35,7 @@ i18n
         },
 
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: process.env.PUBLIC_URL + '/locales/{{lng}}/{{ns}}.json',
         },
     });
 
