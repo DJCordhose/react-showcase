@@ -21,7 +21,11 @@ http://blog.embarc.de/spicker/#9
 
 ## Is architecture just clueless talking and useless Visios?
 
-Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean _hard to change, but somewhat risky_, _restricting what can be built reasonably_, _having the potential to make the endeavor fail_. 
+Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean 
+* _hard to change, but somewhat risky_, 
+* _affecting many teams/people or large parts of the sortware_, 
+* _restricting what can be built reasonably_, 
+* _having the potential to make the endeavor fail_. 
 
 ![Architecture](./architecture.png)
 
