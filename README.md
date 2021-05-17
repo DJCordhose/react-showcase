@@ -23,7 +23,7 @@ http://blog.embarc.de/spicker/#9
 
 Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean 
 * _hard to change, but somewhat risky_, 
-* _affecting many teams/people or large parts of the sortware_, 
+* _affecting many teams/people or large parts of the software_, 
 * _restricting what can be built reasonably_, 
 * _having the potential to make the endeavor fail_. 
 
