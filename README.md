@@ -18,10 +18,10 @@ This is my recommended tech stack for a typical enterprise application. Underlyi
 
 http://blog.embarc.de/spicker/#9
 
-
 ## Is architecture just clueless talking and useless Visios?
 
-Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean 
+Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean
+
 * _hard to change, but somewhat risky_, 
 * _affecting many teams/people or large parts of the software_, 
 * _restricting what can be built reasonably_, 
@@ -39,6 +39,7 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 ## Most important Architectural decisions
 
 ### Framework
+
 - https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/
 - https://tsh.io/state-of-frontend/#frameworks
 - https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce
@@ -46,6 +47,7 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 - https://reactjs.org/
 
 ### Typing
+
 - https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/ts
 - https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
@@ -62,6 +64,7 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 - Type vs Interface: https://nilshartmann.github.io/typescript-intro/2021_js_ts.html#type-vs-interface
 
 ### State Management
+
 - https://2020.stateofjs.com/en-US/technologies/datalayer/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/innere-struktur
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/state-management
@@ -89,6 +92,7 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
   - "state management is the wild west and the categories aren't mutually exclusive (and can become each other with abstractions/convention), so it's a rough categorization"
   
 ### Micro-Frontends
+
 - https://micro-frontends.org/
 - https://the-tractor.store/
   - https://github.com/naltatis/micro-frontends-in-action-code
@@ -108,29 +112,35 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
       - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
 ### Structure within a module
+
 - Smart Components: `Counter.tsx`
 - Dumb Components: `AriaButton.tsx`
 - http://blog.embarc.de/spicker/#9
 
 ### Testing
 
-We have dedicated a whole document to this topic: testing.md
+Dedicated document: testing.md
 
 ## Less important technical recommendations
+
 ### Dependency Management
+
 - https://classic.yarnpkg.com/en/
 
 ### Linting
+
 - https://eslint.org/
 - TypeScript can also be used as a linter
 
 ### Routing
+
 - https://github.com/ReactTraining/react-router
 - Routing and Redux
   - Deprecated: https://github.com/reactjs/react-router-redux
   - "official" answer - don't: https://stackoverflow.com/questions/36722584/how-to-sync-redux-state-and-url-hash-tag-params/36749963#36749963
 
 ### i18n, l10n
+
 - https://react.i18next.com/
   - https://www.i18next.com/translation-function/interpolation
   - https://github.com/i18next/react-i18next
@@ -140,11 +150,13 @@ We have dedicated a whole document to this topic: testing.md
   - http://numeraljs.com/
 
 ### Build / Deployment
+
 - `yarn build`
 - https://create-react-app.dev/docs/deployment/ 
 - https://create-react-app.dev/docs/deployment/#github-pages
 
 ### Component Libraries
+
 - https://material-ui.com/
 - https://github.com/microsoft/fluentui
 - Build your own 
@@ -159,6 +171,7 @@ We have dedicated a whole document to this topic: testing.md
      - modules referenced via "exports" can include modern syntax: https://twitter.com/_developit/status/1347296236282523648
 
 ### CSS Framework
+
 - https://tailwindcss.com
   - https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
   - https://tailwindcss.com/docs/optimizing-for-production

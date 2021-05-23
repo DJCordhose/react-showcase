@@ -54,7 +54,8 @@ All functional tests may pass, but application might still be ugly or even broke
 
 ![Tesing Sucks 2](./testing-sucks-2.gif)
 
-Visual regressions test against a golden master 
+Visual regressions test against a golden master
+
 * create golder master: `yarn e2e:visual:snapshot`
 * create test snapshot: `yarn e2e:visual:test`
 * compare, create report and fail if deviation is above threshold: `yarn e2e:visual:compare`
