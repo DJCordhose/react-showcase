@@ -9,11 +9,12 @@ import {
 } from "./counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../lib/AriaButton";
-import { IncrementByAmount } from "./IncrementByAmount";
-import { FlexContainer } from "../../lib/FlexContainer";
+import { AriaButton } from "../../common/components/AriaButton";
+import { IncrementByAmount } from "./containers/IncrementByAmount";
+import { FlexContainer } from "../../common/components/FlexContainer";
+import { RevenueContainer } from "./components/RevenueContainer";
 
-export function Counter() {
+export default function Counter() {
   const count = useSelector(selectCount);
   const inProgress = useSelector(selectInProgress);
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ export function Counter() {
           inProgress={inProgress['LOAD']}
         />
       </FlexContainer>
+      <RevenueContainer count={count} />
     </div>
   );
 }

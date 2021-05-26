@@ -1,28 +1,25 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Counter } from "./features/counter/Counter";
-import { selectCount } from "./features/counter/counterSlice";
+import React, { lazy } from "react";
 
-import { useTranslation } from "react-i18next";
 import { SwitchLanguage } from "./SwitchLanguage";
 import { Nav } from "./Nav";
 
-function App() {
-  const { t } = useTranslation();
-  const count = useSelector(selectCount);
+// https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+const Counter = lazy(() => import("./features/counter/Counter"));
+const Hello = lazy(() => import("./features/hello/Hello"));
+
+function App() {
   return (
-    <div id='cnt-app' className="p-6 max-w-sm mx-auto space-x-5">
-      <Nav />
-      <SwitchLanguage />
-      <Counter />
-      <p>
-        {t("users", {
-          date: new Date(),
-          count: count,
-          revenue: count * Math.PI,
-        })}
-      </p>
+    <div id="cnt-app" className="p-6 max-w-sm mx-auto space-x-5">
+      <Router basename={process.env.PUBLIC_URL}>
+        <Nav />
+        <SwitchLanguage />
+        <Switch>
+          <Route exact path="/" component={Counter} />
+          <Route path="/hello" component={Hello} />
+        </Switch>
+      </Router>
     </div>
   );
 }

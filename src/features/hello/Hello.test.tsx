@@ -1,9 +1,7 @@
-import React, { Suspense } from "react";
-import { render } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
-import App from "./App";
+import { store } from "../../app/store";
+import Hello from "./Hello";
 import { BrowserRouter as Router } from "react-router-dom";
 
 // https://react.i18next.com/misc/testing
@@ -19,25 +17,13 @@ jest.mock("react-i18next", () => ({
   },
 }));
 
-test("smoke: renders something", () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
-  );
-
-  expect(getByText(/users/i)).toBeInTheDocument();
-});
-
 // https://jestjs.io/docs/en/snapshot-testing
 test("snapshot: renders correctly", () => {
   const tree = renderer
     .create(
       <Provider store={store}>
         <Router>
-          <App />
+          <Hello />
         </Router>
       </Provider>
     )

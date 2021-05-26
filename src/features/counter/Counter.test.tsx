@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 
 import { Provider } from "react-redux";
 import { store } from "../../app/store";
-import { Counter } from "./Counter";
+import Counter from "./Counter";
 
 // https://react.i18next.com/misc/testing
 jest.mock("react-i18next", () => ({

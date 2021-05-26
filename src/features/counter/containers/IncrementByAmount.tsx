@@ -4,11 +4,11 @@ import {
   incrementByAmount,
   incrementAsync,
   selectInProgress,
-} from "./counterSlice";
+} from "../counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../lib/AriaButton";
-import { FlexContainer } from "../../lib/FlexContainer";
+import { AriaButton } from "../../../common/components/AriaButton";
+import { FlexContainer } from "../../../common/components/FlexContainer";
 
 export function IncrementByAmount() {
   const inProgress = useSelector(selectInProgress);
