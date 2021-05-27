@@ -18,7 +18,7 @@ This is my recommended tech stack for a typical enterprise application. Underlyi
 
 http://blog.embarc.de/spicker/#9
 
-## Is architecture just clueless talking and useless Visios?
+## Is architecture just clueless talking and useless Visios? (Well, it can be...)
 
 Architecture is the sum of the important Processes, Structures, Patterns, Architectural Nuggets and Frameworks. Important can mean
 
@@ -119,7 +119,7 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 
 ### Testing
 
-Dedicated document: testing.md
+[Dedicated document](./testing.md)
 
 ## Less important technical recommendations
 
