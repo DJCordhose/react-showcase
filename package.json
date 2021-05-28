@@ -28,6 +28,7 @@
     "start": "yarn tailwind:prepare && react-scripts start",
     "build": "cross-env NODE_ENV=production yarn tailwind:prepare && react-scripts build",
     "test": "yarn tailwind:prepare && react-scripts test",
+    "test:coverage": "yarn test -- --coverage --watchAll=false",
     "tailwind:prepare": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
