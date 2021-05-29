@@ -1,10 +1,8 @@
 import type { PropsWithChildren } from "react";
 
-type Props = Readonly<
-  PropsWithChildren<{
-    center?: boolean;
-  }>
->;
+type Props = PropsWithChildren<{
+  center?: boolean;
+}>;
 
 export function FlexContainer({ children, center = false }: Props) {
   return (

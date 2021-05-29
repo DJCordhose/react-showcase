@@ -1,11 +1,11 @@
-type Props = Readonly<{
+type Props = {
   testid: string;
   label: string;
   text: string;
   onClick: () => void;
   inProgress?: boolean;
   flat?: boolean;
-}>;
+};
 
 export function AriaButton({ testid, label, text, onClick, inProgress=false, flat=false }: Props) {
 
