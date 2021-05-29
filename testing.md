@@ -49,6 +49,10 @@ https://2020.stateofjs.com/en-US/technologies/testing/
 
 ### Visual Regression Tests
 
+- http://yahoo.github.io/blink-diff/
+  - https://github.com/yahoo/blink-diff
+- https://github.com/tacoss/testcafe-blink-diff
+
 All functional tests may pass, but application might still be ugly or even broken
 ![Tesing Sucks](./testing-sucks.gif)
 

@@ -7,9 +7,12 @@
 
 # testing
 /coverage
+/regression-report
 /screenshots
 /test/e2e/screenshots
-# test/regression/screenshots/**/test.png
+test/regression/screenshots/**/test.png
+test/regression/screenshots/**/out.png
+test/regression/screenshots/**/thumbnails/**
 /generated
 
 # production
