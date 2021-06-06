@@ -1,7 +1,9 @@
 import React from "react";
 
+import styles from './LoadingIndicator.module.scss';
+
 export function LoadingIndicator({ title }: { title: string }) {
   return (
-        <h1>{title}</h1>
+        <div className={styles.loading}>{title}</div>
   );
 }
