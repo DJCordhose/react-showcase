@@ -7,8 +7,7 @@ import {
 } from "../counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../../common/components/AriaButton";
-import { FlexContainer } from "../../../common/components/FlexContainer";
+import { AriaButton, FlexContainer } from "zeigermann-component-lib";
 
 export function IncrementByAmount() {
   const inProgress = useSelector(selectInProgress);

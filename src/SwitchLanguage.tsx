@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "./common/components/AriaButton";
+import { AriaButton } from "zeigermann-component-lib";
 
 export function SwitchLanguage() {
   const { t, i18n } = useTranslation();

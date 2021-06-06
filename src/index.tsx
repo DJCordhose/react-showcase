@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./assets/main.css";
+import "zeigermann-component-lib/dist/index.esm.css";
+
 import { LoadingIndicator } from "./common/components/LoadingIndicator";
 import { store } from "./app/store";
 import { Provider } from "react-redux";

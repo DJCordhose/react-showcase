@@ -9,9 +9,9 @@ import {
 } from "./counterSlice";
 
 import { useTranslation } from "react-i18next";
-import { AriaButton } from "../../common/components/AriaButton";
+import { AriaButton, FlexContainer } from "zeigermann-component-lib";
+
 import { IncrementByAmount } from "./containers/IncrementByAmount";
-import { FlexContainer } from "../../common/components/FlexContainer";
 import { RevenueContainer } from "./components/RevenueContainer";
 
 export default function Counter() {
