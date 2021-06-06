@@ -5,8 +5,10 @@ exports[`snapshot: renders correctly 1`] = `
   className="p-6 max-w-sm mx-auto space-x-5"
   id="hello-app"
 >
-  <p>
+  <div
+    className="sc-bdnxRM epder"
+  >
     hello
-  </p>
+  </div>
 </div>
 `;
