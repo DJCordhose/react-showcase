@@ -65,17 +65,29 @@ export const incrementAsync = (amount: number): AppThunk => async dispatch => {
 
 export const loadBackendConfig = (): AppThunk => async dispatch => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api'));
+  dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api/'));
 };
 
-export const loadFromServer = (): AppThunk => async (dispatch, getState) => {
+// composed async action creator
+export const initFromBackend = (): AppThunk => async (dispatch, getState) => {
+  if (!selectIsConfigured(getState())) {
+    await dispatch(loadBackendConfig());
+  }
+  await Promise.all([
+    dispatch(loadFromServer()),
+    dispatch(loadFromServer('users2.json'))
+  ])
+  console.log('all initialized')
+}
+
+export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => async (dispatch, getState) => {
   dispatch(startOperation('LOAD'));
   try {
     const baseUrl = getState().counter.backendApiUrl;
     if (!baseUrl) {
       throw new Error('backend not not configured');
     }
-    const response = await fetch(baseUrl + "/users.json");
+    const response = await fetch(baseUrl + endpoint);
     const json = await response.json();
     dispatch(setValue(json.count));
   } catch (error) {

@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   decrement,
   increment,
-  loadBackendConfig,
+  // loadBackendConfig,
   loadFromServer,
+  initFromBackend,
   selectCount,
   selectInProgress,
   selectIsConfigured
@@ -26,7 +27,8 @@ export default function Counter() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    dispatch(loadBackendConfig())
+    // dispatch(loadBackendConfig())
+    dispatch(initFromBackend())
   }, [dispatch]);
 
 
