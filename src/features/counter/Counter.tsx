@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   decrement,
   increment,
+  loadBackendConfig,
   loadFromServer,
   selectCount,
   selectInProgress,
+  selectIsConfigured
 } from "./counterSlice";
 
 import { useTranslation } from "react-i18next";
 import { AriaButton, FlexContainer } from "zeigermann-component-lib";
+import { LoadingIndicator } from "../../common/components/LoadingIndicator";
 
 import { IncrementByAmount } from "./containers/IncrementByAmount";
 import { RevenueContainer } from "./components/RevenueContainer";
@@ -17,10 +20,17 @@ import { RevenueContainer } from "./components/RevenueContainer";
 export default function Counter() {
   const count = useSelector(selectCount);
   const inProgress = useSelector(selectInProgress);
+  const isConfigured = useSelector(selectIsConfigured);
+
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  return (
+  useEffect(() => {
+    dispatch(loadBackendConfig())
+  }, [dispatch]);
+
+
+  const counterEl = (
     <div>
       <FlexContainer>
         <AriaButton
@@ -58,4 +68,6 @@ export default function Counter() {
       <RevenueContainer count={count} />
     </div>
   );
+
+  return isConfigured ? counterEl : <LoadingIndicator title="Loading configuration..." />;
 }

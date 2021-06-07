@@ -6,6 +6,7 @@ type Operation = 'LOAD' | 'ADD_ASYNC'
 interface CounterState {
   value: number;
   operationInProgress: Partial<Record<Operation,boolean>>;
+  backendApiUrl?: string;
 }
 
 const initialState: CounterState = {
@@ -41,27 +42,40 @@ export const counterSlice = createSlice({
     endOperation: (state, action: PayloadAction<Operation>) => {
       state.operationInProgress[action.payload] = false;
     },
+    configureBackendUrl: (state, action: PayloadAction<string>) => {
+      state.backendApiUrl = action.payload;
+    },
   },
 });
 
 export const { increment, decrement, incrementByAmount, setValue, startOperation, endOperation } = counterSlice.actions;
 
+const { configureBackendUrl } = counterSlice.actions;
+
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched
-export const incrementAsync = (amount: number): AppThunk => dispatch => {
+export const incrementAsync = (amount: number): AppThunk => async dispatch => {
   dispatch(startOperation('ADD_ASYNC'));
-  setTimeout(() => {
-    dispatch(incrementByAmount(amount));
-    dispatch(endOperation('ADD_ASYNC'));
-  }, 1000);
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  dispatch(incrementByAmount(amount));
+  dispatch(endOperation('ADD_ASYNC'));
 };
 
-export const loadFromServer = (): AppThunk => async dispatch => {
+export const loadBackendConfig = (): AppThunk => async dispatch => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api'));
+};
+
+export const loadFromServer = (): AppThunk => async (dispatch, getState) => {
   dispatch(startOperation('LOAD'));
   try {
-    const response = await fetch(process.env.PUBLIC_URL + "/api/users.json");
+    const baseUrl = getState().counter.backendApiUrl;
+    if (!baseUrl) {
+      throw new Error('backend not not configured');
+    }
+    const response = await fetch(baseUrl + "/users.json");
     const json = await response.json();
     dispatch(setValue(json.count));
   } catch (error) {
@@ -76,5 +90,6 @@ export const loadFromServer = (): AppThunk => async dispatch => {
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCount = (state: RootState) => state.counter.value;
 export const selectInProgress = (state: RootState) => state.counter.operationInProgress;
+export const selectIsConfigured = (state: RootState) => state.counter.backendApiUrl !== undefined;
 
 export default counterSlice.reducer;
