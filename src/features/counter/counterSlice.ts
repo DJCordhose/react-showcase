@@ -81,9 +81,10 @@ export const initFromBackend = (): AppThunk => async (dispatch, getState) => {
   if (!selectIsConfigured(getState())) {
     await dispatch(loadBackendConfig());
   }
+  // makes tests indeterministic, so we deactivate the second call for now
   await Promise.all([
     dispatch(loadFromServer()),
-    dispatch(loadFromServer('users2.json'))
+    // dispatch(loadFromServer('users2.json'))
   ])
   console.log('all initialized')
 }
