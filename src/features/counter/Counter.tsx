@@ -63,7 +63,7 @@ export default function Counter() {
           label={t("load")}
           text={t("load")}
           flat={true}
-          onClick={() => dispatch(loadFromServer())}
+          onClick={() => dispatch(loadFromServer('users2.json'))}
           inProgress={inProgress['LOAD']}
         />
       </FlexContainer>

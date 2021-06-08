@@ -34,12 +34,14 @@ const valueEl = Selector("[data-testid='count:value']");
 // const addAmountBtnAsync = screen.getByLabelText('Add Users (async)');
 // const loadBtn = screen.getByLabelText('Load data from server');
 
-const expectedInitialValue = 1000000;
+const initialValue = 1000000;
 
 test('increase', async t => {
-    const initialValue = Number(await valueEl.innerText)
+    // wait until precondition is fulfilled, indicating app has started
+    await t
+      .expect(valueEl.exists).ok()
+      .expect(valueEl.innerText).eql(String(initialValue));
 
-    await t.expect(initialValue).eql(expectedInitialValue);
     await t.click(incrementBtn);
     const newValue = Number(await valueEl.innerText)
     await t.expect(newValue).eql(initialValue + 1);
@@ -47,9 +49,11 @@ test('increase', async t => {
 });
 
 test('decrease', async t => {
-    const initialValue = Number(await valueEl.innerText)
+    // wait until precondition is fulfilled, indicating app has started
+    await t
+      .expect(valueEl.exists).ok()
+      .expect(valueEl.innerText).eql(String(initialValue));
 
-    await t.expect(initialValue).eql(expectedInitialValue);
     await t.click(decrementBtn);
     const newValue = Number(await valueEl.innerText)
     await t.expect(newValue).eql(initialValue - 1);
@@ -57,10 +61,12 @@ test('decrease', async t => {
 });
 
 test('add amount', async t => {
+    // wait until precondition is fulfilled, indicating app has started
+    await t
+    .expect(valueEl.exists).ok()
+    .expect(valueEl.innerText).eql(String(initialValue));
+  
     const increment = 9;
-    const initialValue = Number(await valueEl.innerText)
-
-    await t.expect(initialValue).eql(expectedInitialValue);
     await t.typeText(amountInput, String(increment), { replace: true });
     await t.click(addAmountBtn);
     const newValue = Number(await valueEl.innerText)
@@ -69,10 +75,12 @@ test('add amount', async t => {
 
 
 test('add amount async', async t => {
+    // wait until precondition is fulfilled, indicating app has started
+    await t
+    .expect(valueEl.exists).ok()
+    .expect(valueEl.innerText).eql(String(initialValue));
+    
     const increment = 9;
-    const initialValue = Number(await valueEl.innerText)
-
-    await t.expect(initialValue).eql(expectedInitialValue);
     await t.typeText(amountInput, String(increment), { replace: true });
     await t.click(addAmountBtnAsync);
 
@@ -83,10 +91,12 @@ test('add amount async', async t => {
 });
 
 test('load from server', async t => {
-    const initialValue = Number(await valueEl.innerText)
+    // wait until precondition is fulfilled, indicating app has started
+    await t
+      .expect(valueEl.exists).ok()
+      .expect(valueEl.innerText).eql(String(initialValue));
 
-    await t.expect(initialValue).eql(expectedInitialValue);
     await t.click(loadBtn);
     const newValue = Number(await valueEl.innerText)
-    await t.expect(newValue).eql(1000000);
+    await t.expect(newValue).eql(2000000);
 });
