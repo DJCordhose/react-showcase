@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/testcafe": "^4.3.1",
     "@testing-library/user-event": "^12.5.0",
+    "axios": "^0.21.1",
     "fetch-mock": "^9.11.0",
     "i18next": "^19.8.4",
     "i18next-xhr-backend": "^3.2.2",

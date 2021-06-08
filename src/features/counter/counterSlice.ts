@@ -1,13 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppThunk, RootState } from '../../app/store';
 
+import axios from 'axios';
+
 type Operation = 'LOAD' | 'ADD_ASYNC'
 
-interface CounterState {
+type AppState = {
   value: number;
+}
+
+type UIState = {
   operationInProgress: Partial<Record<Operation,boolean>>;
+}
+
+type ConfigState = {
   backendApiUrl?: string;
 }
+
+type CounterState = AppState & UIState & ConfigState;
 
 const initialState: CounterState = {
   value: 0,
@@ -81,13 +91,19 @@ export const initFromBackend = (): AppThunk => async (dispatch, getState) => {
 }
 
 export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => async (dispatch, getState) => {
+  const baseUrl = getState().counter.backendApiUrl;
+  if (!baseUrl) {
+    throw new Error('backend not not configured');
+  }
+  const url = baseUrl + endpoint;
+  // await dispatch(loadFromServerFetch(url));
+  await dispatch(loadFromServerAxios(url));
+}
+
+export const loadFromServerFetch = (url: string): AppThunk => async dispatch => {
   dispatch(startOperation('LOAD'));
   try {
-    const baseUrl = getState().counter.backendApiUrl;
-    if (!baseUrl) {
-      throw new Error('backend not not configured');
-    }
-    const response = await fetch(baseUrl + endpoint);
+    const response = await fetch(url);
     const json = await response.json();
     dispatch(setValue(json.count));
   } catch (error) {
@@ -96,6 +112,27 @@ export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => as
     dispatch(endOperation('LOAD'));
   }
 };
+
+type BackendCountResponse = {
+  count: number,
+  nada: string // does not exist in response
+}
+
+export const loadFromServerAxios = (url: string): AppThunk => async dispatch => {
+  dispatch(startOperation('LOAD'));
+  try {
+    const {data} = await axios.get<BackendCountResponse>(url)
+    dispatch(setValue(data.count));
+    // this is not checked at runtime
+    console.log(data.nada)
+  } catch (error) {
+    console.error("Fetch failed", error);
+  } finally {
+    dispatch(endOperation('LOAD'));
+  }
+
+}
+
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of

@@ -46,23 +46,6 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 - https://djcordhose.github.io/spa-workshop/2020_arch.html#/frameworks
 - https://reactjs.org/
 
-### Typing
-
-- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
-- https://djcordhose.github.io/spa-workshop/2020_arch.html#/ts
-- https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
-- https://www.typescriptlang.org/
-- https://www.typescriptlang.org/docs/handbook/react.html
-- https://react-typescript-cheatsheet.netlify.app/
-- https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
-- Advise
-  - Don't overdo it
-    - You can go a long way, but you probably shouldn't: https://github.com/gcanti/fp-ts
-  - Libraries (shared code, also completely internal) can benefit from a lot of typing
-  - Application code mainly benefits from typing
-    - Often simply making a component TS can bring a huge benefit without adding any type information at all
-- Type vs Interface: https://nilshartmann.github.io/typescript-intro/2021_js_ts.html#type-vs-interface
-
 ### State Management
 
 - https://2020.stateofjs.com/en-US/technologies/datalayer/
@@ -121,8 +104,37 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 
 [Dedicated document](./testing.md)
 
+### Typing
+
+- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
+- https://djcordhose.github.io/spa-workshop/2020_arch.html#/ts
+- https://djcordhose.github.io/spa-workshop/2020_js_ts_intro.html#/ts
+- https://www.typescriptlang.org/
+- https://www.typescriptlang.org/docs/handbook/react.html
+- https://react-typescript-cheatsheet.netlify.app/
+- https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide
+- Advise
+  - Don't overdo it
+    - You can go a long way, but you probably shouldn't: https://github.com/gcanti/fp-ts
+  - Libraries (shared code, also completely internal) can benefit from a lot of typing
+  - Application code mainly benefits from typing
+    - Often simply making a component TS can bring a huge benefit without adding any type information at all
+- Type vs Interface: https://nilshartmann.github.io/typescript-intro/2021_js_ts.html#type-vs-interface
+
 ## Less important technical recommendations
 
+### Data Fetching and Synchronization
+- low level
+  - just fetch (built-in): https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+  - axios (isomporphic): https://axios-http.com/
+  - fair comparison of both: https://blog.logrocket.com/axios-or-fetch-api/
+- high level
+  - for redux toolkit: https://redux-toolkit.js.org/rtk-query/overview
+  - Alternatives: https://react-query.tanstack.com/comparison
+- Polling
+  - https://react-query.tanstack.com/examples/auto-refetching
+  - https://redux-toolkit.js.org/rtk-query/usage/polling  
+  
 ### Dependency Management
 
 - https://classic.yarnpkg.com/en/
