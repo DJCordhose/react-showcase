@@ -6,12 +6,13 @@ import counterReducer from './counterSlice';
 import {
   decrement,
   increment,
-  loadFromServer, 
+  loadFromServerFetch, 
   selectCount,
   startOperation,
   endOperation,
   setValue
 } from './counterSlice';
+
 import { store, RootState } from "../../app/store";
 
 const middlewares = [thunk]
@@ -40,21 +41,24 @@ test('reducer decrements', () => {
 // https://redux.js.org/recipes/writing-tests
 test('loaded data lands in state', async () => {
   const newCount = 1000000; 
-  fetchMock.getOnce(process.env.PUBLIC_URL + "/api/users.json", {
+  const url = process.env.PUBLIC_URL + "/api/users.json"
+
+  fetchMock.getOnce(url, {
     body: {
       count: newCount
   },
     headers: { 'content-type': 'application/json' }
   });
 
-  await store.dispatch(loadFromServer())
+  await store.dispatch(loadFromServerFetch(url));
   const actualCount = selectCount(store.getState());
   expect(actualCount).toBe(newCount);
 });
 
 test('loading dispatches start and end', async () => {
   const newCount = 1000000; 
-  fetchMock.getOnce(process.env.PUBLIC_URL + "/api/users.json", {
+  const url = process.env.PUBLIC_URL + "/api/users.json"
+  fetchMock.getOnce(url, {
     body: {
       count: newCount
   },
@@ -66,7 +70,7 @@ test('loading dispatches start and end', async () => {
   const mockedStore = mockStore(store.getState())
   // type inference unsolved
   // https://stackoverflow.com/questions/66570090/type-casting-dispatch-for-configuremockstore-from-createasyncthunk
-  const loadThunk: any = loadFromServer();
+  const loadThunk: any = loadFromServerFetch(url);
   await mockedStore.dispatch(loadThunk)
 
   const expectedActions = [

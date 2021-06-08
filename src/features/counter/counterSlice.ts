@@ -58,9 +58,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, setValue, startOperation, endOperation } = counterSlice.actions;
-
-const { configureBackendUrl } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount, setValue, startOperation, endOperation, configureBackendUrl } = counterSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -96,8 +94,8 @@ export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => as
     throw new Error('backend not not configured');
   }
   const url = baseUrl + endpoint;
-  // await dispatch(loadFromServerFetch(url));
-  await dispatch(loadFromServerAxios(url));
+  await dispatch(loadFromServerFetch(url));
+  // await dispatch(loadFromServerAxios(url));
 }
 
 export const loadFromServerFetch = (url: string): AppThunk => async dispatch => {

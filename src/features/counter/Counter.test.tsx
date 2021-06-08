@@ -6,6 +6,9 @@ import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
 import { store } from "../../app/store";
 import Counter from "./Counter";
+import {
+  configureBackendUrl
+} from './counterSlice';
 
 // https://react.i18next.com/misc/testing
 jest.mock("react-i18next", () => ({
@@ -19,6 +22,12 @@ jest.mock("react-i18next", () => ({
     };
   },
 }));
+
+beforeAll(() => {
+  // to make sure app renders
+  store.dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api/'));
+
+})
 
 test("smoke: renders something", () => {
   const { getAllByText } = render(
