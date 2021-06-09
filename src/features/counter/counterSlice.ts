@@ -95,7 +95,11 @@ export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => as
     throw new Error('backend not not configured');
   }
   const url = baseUrl + endpoint;
-  await dispatch(loadFromServerFetch(url));
+
+  const promise = dispatch(loadFromServerFetch(url));
+  console.log(promise)
+  const result = await promise;
+  console.log(promise)
   // await dispatch(loadFromServerAxios(url));
 }
 
@@ -105,6 +109,7 @@ export const loadFromServerFetch = (url: string): AppThunk => async dispatch => 
     const response = await fetch(url);
     const json = await response.json();
     dispatch(setValue(json.count));
+    return json.count;
   } catch (error) {
     console.error("Fetch failed", error);
   } finally {

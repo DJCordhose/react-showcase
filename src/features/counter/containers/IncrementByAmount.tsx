@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import {
   incrementByAmount,
   incrementAsync,
@@ -10,8 +10,8 @@ import { useTranslation } from "react-i18next";
 import { AriaButton, FlexContainer } from "zeigermann-component-lib";
 
 export function IncrementByAmount() {
-  const inProgress = useSelector(selectInProgress);
-  const dispatch = useDispatch();
+  const inProgress = useAppSelector(selectInProgress);
+  const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState<number>(2);
   const { t } = useTranslation();
 

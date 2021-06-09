@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+
 import {
   decrement,
   increment,
@@ -19,11 +20,11 @@ import { IncrementByAmount } from "./containers/IncrementByAmount";
 import { RevenueContainer } from "./components/RevenueContainer";
 
 export default function Counter() {
-  const count = useSelector(selectCount);
-  const inProgress = useSelector(selectInProgress);
-  const isConfigured = useSelector(selectIsConfigured);
+  const count = useAppSelector(selectCount);
+  const inProgress = useAppSelector(selectInProgress);
+  const isConfigured = useAppSelector(selectIsConfigured);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { t } = useTranslation();
 
   useEffect(() => {
