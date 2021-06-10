@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://node_modules/zeigermann-component-lib/dist/AriaButton.module.css","webpack://node_modules/zeigermann-component-lib/dist/LoadingIndicator.module.css"],"names":[],"mappings":"AAAA,iCACI,WACJ,CCFA,mCACI,wBACJ","file":"2.108b0ad9.chunk.css","sourcesContent":[".button {\n    color: brown;\n}",".bg {\n    background-color:burlywood;\n}"]}

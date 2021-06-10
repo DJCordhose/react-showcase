@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-showcase/static/css/main.0ca2cf2e.chunk.css",
+    "main.css": "/react-showcase/static/css/main.4d0fc55c.chunk.css",
     "main.js": "/react-showcase/static/js/main.47e91164.chunk.js",
     "main.js.map": "/react-showcase/static/js/main.47e91164.chunk.js.map",
     "runtime-main.js": "/react-showcase/static/js/runtime-main.c23c2fdb.js",
     "runtime-main.js.map": "/react-showcase/static/js/runtime-main.c23c2fdb.js.map",
-    "static/css/2.ec450a44.chunk.css": "/react-showcase/static/css/2.ec450a44.chunk.css",
-    "static/js/2.50e6504e.chunk.js": "/react-showcase/static/js/2.50e6504e.chunk.js",
-    "static/js/2.50e6504e.chunk.js.map": "/react-showcase/static/js/2.50e6504e.chunk.js.map",
+    "static/css/2.108b0ad9.chunk.css": "/react-showcase/static/css/2.108b0ad9.chunk.css",
+    "static/js/2.20e7ad30.chunk.js": "/react-showcase/static/js/2.20e7ad30.chunk.js",
+    "static/js/2.20e7ad30.chunk.js.map": "/react-showcase/static/js/2.20e7ad30.chunk.js.map",
     "static/js/3.c1c53aea.chunk.js": "/react-showcase/static/js/3.c1c53aea.chunk.js",
     "static/js/3.c1c53aea.chunk.js.map": "/react-showcase/static/js/3.c1c53aea.chunk.js.map",
     "static/js/4.a40f9ce7.chunk.js": "/react-showcase/static/js/4.a40f9ce7.chunk.js",
@@ -15,15 +15,15 @@
     "static/js/5.3bb9d962.chunk.js": "/react-showcase/static/js/5.3bb9d962.chunk.js",
     "static/js/5.3bb9d962.chunk.js.map": "/react-showcase/static/js/5.3bb9d962.chunk.js.map",
     "index.html": "/react-showcase/index.html",
-    "static/css/2.ec450a44.chunk.css.map": "/react-showcase/static/css/2.ec450a44.chunk.css.map",
-    "static/css/main.0ca2cf2e.chunk.css.map": "/react-showcase/static/css/main.0ca2cf2e.chunk.css.map",
-    "static/js/2.50e6504e.chunk.js.LICENSE.txt": "/react-showcase/static/js/2.50e6504e.chunk.js.LICENSE.txt"
+    "static/css/2.108b0ad9.chunk.css.map": "/react-showcase/static/css/2.108b0ad9.chunk.css.map",
+    "static/css/main.4d0fc55c.chunk.css.map": "/react-showcase/static/css/main.4d0fc55c.chunk.css.map",
+    "static/js/2.20e7ad30.chunk.js.LICENSE.txt": "/react-showcase/static/js/2.20e7ad30.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c23c2fdb.js",
-    "static/css/2.ec450a44.chunk.css",
-    "static/js/2.50e6504e.chunk.js",
-    "static/css/main.0ca2cf2e.chunk.css",
+    "static/css/2.108b0ad9.chunk.css",
+    "static/js/2.20e7ad30.chunk.js",
+    "static/css/main.4d0fc55c.chunk.css",
     "static/js/main.47e91164.chunk.js"
   ]
 }
