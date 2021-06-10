@@ -74,8 +74,42 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 - Comparison based on single/multi and direct/indirect: https://twitter.com/DavidKPiano/status/1353712136372039682
   - "state management is the wild west and the categories aren't mutually exclusive (and can become each other with abstractions/convention), so it's a rough categorization"
   
-### Micro-Frontends
 
+### Macro-Structure of modules and dependencies
+
+Don't underestimate, can be crucial for win or lose. This actually is a failed project
+- uses CSS lib tailwind
+- factored out lib of common components also using tailwind into project of its own
+- now independent lib has dependency on tailwind
+  - how to build this properly?
+    - publish bundled version of CSS -> duplicates
+    - leave it up to using project to include CSS -> how to properly purge unwanted styles (tailwind unpurged can be many 100k)
+      - this is how we handle it here, but only is ok, because this is toy project
+  - alternative is to get rid of CSS lib for component lib
+     - how to do this? 
+     - do we break something?
+     - would we even know? how to test?_
+#### Modular Monolith
+- Development in a monorepo
+  - https://lerna.js.org/
+  - https://classic.yarnpkg.com/en/docs/workspaces/
+- Code Splitting: 
+  - https://create-react-app.dev/docs/code-splitting
+  - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+- Make or buy lib
+- CSS or Component lib?
+  - don't mix well
+- Build your own lib
+  - https://classic.yarnpkg.com/en/docs/workspaces/
+  - https://lerna.js.org/
+  - https://blog.harveydelaney.com/creating-your-own-react-component-library/
+  -  modes of maintenance
+    1. corporate: use is mandatory for all, high risk in quality and suitability of lib
+    2. agile: use recommended, usage shows quality and suitability of lib
+  -  ownership?
+  -  What to publish?
+
+#### Micro Frontends
 - https://micro-frontends.org/
 - https://the-tractor.store/
   - https://github.com/naltatis/micro-frontends-in-action-code
@@ -85,16 +119,9 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 - Client-Side Integration
   - iFrame: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
   - WebComponent: https://developer.mozilla.org/en-US/docs/Web/Web_Components
-  - AppShell: https://developers.google.com/web/fundamentals/architecture/app-shell
-  - Modular Monolith
-    - Development in a monorepo
-      - https://lerna.js.org/
-      - https://classic.yarnpkg.com/en/docs/workspaces/
-    - Code Splitting: 
-      - https://create-react-app.dev/docs/code-splitting
-      - https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+  - AppShell: https://developers.google.com/web/fundamentals/architecture/app-shell 
 
-### Structure within a module
+### Micro-Structure within a module
 
 - Smart Components: `Counter.tsx`
 - Dumb Components: `AriaButton.tsx`
@@ -171,16 +198,6 @@ Definition of architecture inspired by: https://martinfowler.com/architecture/
 
 - https://material-ui.com/
 - https://github.com/microsoft/fluentui
-- Build your own 
-  - https://classic.yarnpkg.com/en/docs/workspaces/
-  - https://lerna.js.org/
-  - https://blog.harveydelaney.com/creating-your-own-react-component-library/
-  -  modes of maintenance
-     1. corporate: use is mandatory for all, high risk in quality and suitability of lib
-     2. agile: use recommended, usage shows quality and suitability of lib
-  -  ownership?
-  -  What to publish?
-     - modules referenced via "exports" can include modern syntax: https://twitter.com/_developit/status/1347296236282523648
 
 ### CSS Framework
 
