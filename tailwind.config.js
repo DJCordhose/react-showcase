@@ -1,7 +1,9 @@
 module.exports = {
-  purge: [
-    './src/**/*.tsx'
-  ],
+  // messes with imported components needing all styles
+  // purge: [
+  //   './src/**/*.tsx'
+  // ],
+  purge: false,
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
