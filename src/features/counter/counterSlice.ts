@@ -73,7 +73,12 @@ export const incrementAsync = (amount: number): AppThunk => async dispatch => {
 
 export const loadBackendConfig = (): AppThunk => async dispatch => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
+  console.log(process.env.PUBLIC_URL)
   dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api/'));
+  // add 
+  // "proxy": "http://localhost:8080",
+  // to package.json
+  // dispatch(configureBackendUrl('/api/'));
 };
 
 // composed async action creator
