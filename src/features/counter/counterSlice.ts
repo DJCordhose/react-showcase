@@ -100,6 +100,7 @@ export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => as
   console.log(promise)
   const result = await promise;
   console.log(promise)
+  console.log(result)
   // await dispatch(loadFromServerAxios(url));
 }
 
