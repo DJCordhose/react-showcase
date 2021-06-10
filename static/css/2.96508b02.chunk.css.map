@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://node_modules/zeigermann-component-lib/dist/AriaButton.module.css","webpack://node_modules/zeigermann-component-lib/dist/FlexContainer.module.css"],"names":[],"mappings":"AAAA,iCACI,qBACJ,CCFA,oCACI,wBACJ","file":"2.96508b02.chunk.css","sourcesContent":[".button {\n    background-color: aqua;\n}",".button {\n    background-color:burlywood;\n}"]}
