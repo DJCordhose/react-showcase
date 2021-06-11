@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { store } from "../../app/store";
 import Counter from "./Counter";
 import {
-  configureBackendUrl
+  configureBackend
 } from './counterSlice';
 
 // https://react.i18next.com/misc/testing
@@ -25,7 +25,10 @@ jest.mock("react-i18next", () => ({
 
 beforeAll(() => {
   // to make sure app renders
-  store.dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api/'));
+  store.dispatch(configureBackend({
+    url: process.env.PUBLIC_URL +'/mockapi/',
+    suffix: '.json'
+  }));
 
 })
 

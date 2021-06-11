@@ -20,14 +20,12 @@ exports[`FlexContainer renders as expected 1`] = `
 Array [
   <div
     className="
-      FlexContainer-module_button__bdZ-3
       flex justify-between border-gray-900 border-2 m-2 overflow-hidden"
   >
     <p />
   </div>,
   <div
     className="
-      FlexContainer-module_button__bdZ-3
       flex justify-center border-gray-900 border-2 m-2 overflow-hidden"
   >
     <p />
