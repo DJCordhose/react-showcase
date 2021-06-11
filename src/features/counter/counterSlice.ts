@@ -15,6 +15,7 @@ type UIState = {
 
 type ConfigState = {
   backendApiUrl?: string;
+  backendApiSuffix?: string;
 }
 
 type CounterState = AppState & UIState & ConfigState;
@@ -52,13 +53,14 @@ export const counterSlice = createSlice({
     endOperation: (state, action: PayloadAction<Operation>) => {
       state.operationInProgress[action.payload] = false;
     },
-    configureBackendUrl: (state, action: PayloadAction<string>) => {
-      state.backendApiUrl = action.payload;
+    configureBackend: (state, action: PayloadAction<{url: string, suffix: string}>) => {
+      state.backendApiUrl = action.payload.url;
+      state.backendApiSuffix = action.payload.suffix;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount, setValue, startOperation, endOperation, configureBackendUrl } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount, setValue, startOperation, endOperation, configureBackend } = counterSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -74,11 +76,18 @@ export const incrementAsync = (amount: number): AppThunk => async dispatch => {
 export const loadBackendConfig = (): AppThunk => async dispatch => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   console.log(process.env.PUBLIC_URL)
-  dispatch(configureBackendUrl(process.env.PUBLIC_URL +'/api/'));
+  dispatch(configureBackend({
+    url: process.env.PUBLIC_URL +'/mockapi/',
+    suffix: '.json'
+  }));
+
   // add 
-  // "proxy": "http://localhost:8080",
+  // "proxy": "http://localhost:7000",
   // to package.json
-  // dispatch(configureBackendUrl('/api/'));
+  // dispatch(configureBackend({
+  //   url: '/api/',
+  //   suffix: ''
+  // }));
 };
 
 // composed async action creator
@@ -89,30 +98,33 @@ export const initFromBackend = (): AppThunk => async (dispatch, getState) => {
   // makes tests indeterministic, so we deactivate the second call for now
   await Promise.all([
     dispatch(loadFromServer()),
-    // dispatch(loadFromServer('users2.json'))
+    // dispatch(loadFromServer('users2'))
   ])
   console.log('all initialized')
 }
 
-export const loadFromServer = (endpoint: string = 'users.json' ): AppThunk => async (dispatch, getState) => {
+export const loadFromServer = (endpoint: string = 'users' ): AppThunk => async (dispatch, getState) => {
   const baseUrl = getState().counter.backendApiUrl;
+  const apiSuffix = getState().counter.backendApiSuffix;
   if (!baseUrl) {
     throw new Error('backend not not configured');
   }
-  const url = baseUrl + endpoint;
+  const url = baseUrl + endpoint + apiSuffix;
+
+  console.log(`loading from ${url}`)
 
   const promise = dispatch(loadFromServerFetch(url));
+  // const promise = dispatch(loadFromServerAxios(url));
   console.log(promise)
   const result = await promise;
   console.log(promise)
   console.log(result)
-  // await dispatch(loadFromServerAxios(url));
 }
 
 export const loadFromServerFetch = (url: string): AppThunk => async dispatch => {
   dispatch(startOperation('LOAD'));
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {headers: {'Accept' : 'application/json'}});
     const json = await response.json();
     dispatch(setValue(json.count));
     return json.count;
