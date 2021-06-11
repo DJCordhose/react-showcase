@@ -5,13 +5,13 @@ const port = 7000
 
 app.use(morgan('combined'))
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
     res.send({
         "count": 1000000
     })
 })
 
-app.get('/users2', (req, res) => {
+app.get('/api/users2', (req, res) => {
     res.send({
         "count": 2000000
     })

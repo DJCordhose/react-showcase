@@ -76,18 +76,19 @@ export const incrementAsync = (amount: number): AppThunk => async dispatch => {
 export const loadBackendConfig = (): AppThunk => async dispatch => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   console.log(process.env.PUBLIC_URL)
-  dispatch(configureBackend({
-    url: process.env.PUBLIC_URL +'/mockapi/',
-    suffix: '.json'
-  }));
+  // dispatch(configureBackend({
+  //   url: process.env.PUBLIC_URL +'/mockapi/',
+  //   suffix: '.json'
+  // }));
 
+  // start server and 
   // add 
   // "proxy": "http://localhost:7000",
   // to package.json
-  // dispatch(configureBackend({
-  //   url: '/api/',
-  //   suffix: ''
-  // }));
+  dispatch(configureBackend({
+    url: '/api/',
+    suffix: ''
+  }));
 };
 
 // composed async action creator
