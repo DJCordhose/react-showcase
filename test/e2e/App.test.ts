@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 import { screen  } from '@testing-library/testcafe'
 
-fixture `App Browser Test using Testing Library`
-    .page `http://localhost:3000`
+fixture `App General E2E Test`
+    .page `http://localhost:8080`
     ;
 
 
