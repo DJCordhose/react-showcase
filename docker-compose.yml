@@ -1,0 +1,12 @@
+services:
+    web:
+      build: .
+      ports:
+        - "8080:80"
+      links:
+        - backend
+    backend:
+        build: server
+        ports:
+          - "7000:7000"
+  

@@ -12,7 +12,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "start": "nodemon src/server.js",
-    "start:debug": "nodemon --inspect src/server.js"
+    "start": "nodemon src/index.js",
+    "start:debug": "nodemon --inspect src/index.js"
   }
 }
