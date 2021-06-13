@@ -1,8 +1,9 @@
 import { Selector } from 'testcafe';
-import { screen  } from '@testing-library/testcafe'
+// import { screen  } from '@testing-library/testcafe'
 
 fixture `App General E2E Test`
-    .page `http://localhost:8080`
+    .page `http://localhost:3000`
+    // .page `http://localhost:8080`
     ;
 
 
@@ -30,7 +31,7 @@ const valueEl = Selector("[data-testid='count:value']");
 // const incrementBtn = screen.getByLabelText('Increment value');
 // const decrementBtn = screen.getByLabelText('Decrement value');
 // const amountInput = screen.getByLabelText('Set increment amount')
-// const addAmountBtn = screen.getByLabelText('Add Users (sync)');
+// const addAmountBtn = screen.getByLabelText('Add Users (sync)');q
 // const addAmountBtnAsync = screen.getByLabelText('Add Users (async)');
 // const loadBtn = screen.getByLabelText('Load data from server');
 

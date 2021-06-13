@@ -1,8 +1,18 @@
-import { takeSnapshot } from 'testcafe-blink-diff';
+import { Selector } from "testcafe";
+import { takeSnapshot } from "testcafe-blink-diff";
 
-fixture `App Visual Regression Test`
-    .page `http://localhost:3000`;
+fixture`App Visual Regression Test`.page`http://localhost:3000`;
 
-test("start", async t => {
+test("start", async (t) => {
+  const valueEl = Selector("[data-testid='count:value']");
+  const initialValue = 1000000;
+
+  // wait until precondition is fulfilled, indicating app has started
+  await t
+    .expect(valueEl.exists)
+    .ok()
+    .expect(valueEl.innerText)
+    .eql(String(initialValue));
+
   await takeSnapshot(t);
 });
