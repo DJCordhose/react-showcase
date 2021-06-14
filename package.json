@@ -47,7 +47,7 @@
     "docker:compose:build": "yarn build && docker-compose build",
     "deploy": "gh-pages -d build",
     "e2e:up": "yarn build && yarn docker:compose:build && yarn docker:compose:up && yarn e2e",
-    "e2e": "testcafe chrome test/e2e/",
+    "e2e": "testcafe chrome --assertion-timeout 10000 test/e2e/",
     "e2e:ci": "testcafe chrome:headless -c 5 --assertion-timeout 10000 test/e2e/",
     "e2e:watch": "testcafe chrome test/e2e/ -L",
     "e2e:concurrent": "testcafe chrome -c 5 --assertion-timeout 10000 test/e2e/",
