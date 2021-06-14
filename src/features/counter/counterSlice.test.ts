@@ -41,7 +41,7 @@ test('reducer decrements', () => {
 // https://redux.js.org/recipes/writing-tests
 test('loaded data lands in state', async () => {
   const newCount = 1000000; 
-  const url = process.env.PUBLIC_URL + "/api/users.json"
+  const url = process.env.PUBLIC_URL + "/api/users"
 
   fetchMock.getOnce(url, {
     body: {
@@ -57,7 +57,7 @@ test('loaded data lands in state', async () => {
 
 test('loading dispatches start and end', async () => {
   const newCount = 1000000; 
-  const url = process.env.PUBLIC_URL + "/api/users.json"
+  const url = process.env.PUBLIC_URL + "/api/users"
   fetchMock.getOnce(url, {
     body: {
       count: newCount
